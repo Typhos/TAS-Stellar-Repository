@@ -1,0 +1,25 @@
+@use "../../styles/mixins" as *;
+
+.sector-map {
+  width: calc($max-page-width);
+  margin: 0 auto;
+}
+
+// Hex styling
+.hex {
+  transition: fill 0.3s ease;
+}
+
+.hex.empty {
+  fill: none;
+  stroke: #444;
+}
+
+.hex.planet {
+  cursor: pointer;
+  background-color: none;
+
+  &:hover {
+    stroke: cyan;
+  }
+}

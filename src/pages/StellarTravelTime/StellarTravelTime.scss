@@ -1,0 +1,174 @@
+@use "../../styles/mixins" as *;
+
+.stellar-calculator {
+  background: $bg-color;
+  padding: 20px;
+  border: 2px solid $primary;
+  border-radius: 8px;
+  width: 30rem;
+  min-height: 45rem;
+  margin: 10% auto;
+  text-align: center;
+  font-size: 0.9rem;
+  color: $text-color;
+  box-shadow: 0 0 15px rgba(60, 177, 255, 0.3);
+
+  h2 {
+    font-size: 1.5em;
+    color: $primary;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+  }
+
+  h3 {
+    color: $primary;
+  }
+
+  // Tab Navigation
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid $primary-alt;
+
+    button {
+      flex: 1;
+      border: none;
+      padding: 10px;
+      font-size: 1em;
+      color: $text-color;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: 0.3s;
+      border-radius: 0;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+
+      &:hover {
+        background: lighten($input-bg, 5%);
+      }
+
+      &.active {
+        background: $primary-alt;
+        color: #000;
+        font-weight: bold;
+      }
+    }
+  }
+
+  // Input Section
+  .input-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem;
+    margin: 1rem 0;
+    align-items: center;
+    width: 100%;
+
+    label {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9em;
+      text-transform: uppercase;
+      font-weight: 700;
+
+      &.kmLabel {
+        flex-direction: row;
+      }
+    }
+
+    input {
+      background: $input-bg;
+      border: 1px solid $primary;
+      padding: 5px;
+      border-radius: 3px;
+      font-size: 1em;
+      text-align: center;
+      font-family: inherit;
+      transition: background 0.2s ease-in-out;
+      margin: 1em;
+      width: 5rem;
+      font-size: 1.15rem;
+
+      &:focus {
+        background: darken($input-bg, 5%);
+        outline: none;
+        border-color: lighten($primary, 10%);
+      }
+
+      &.kmInput {
+        width: 12rem;
+      }
+    }
+  }
+
+  // Preset Distance Buttons
+  .preset-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 1rem;
+
+    button {
+      background: $bg-color;
+      border: 1px solid $primary;
+      color: $primary;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 0.8em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background: $primary;
+        color: #000;
+      }
+    }
+  }
+
+  table {
+    min-width: 66%;
+    border-collapse: collapse;
+    border: 1px solid $border-color;
+    font-size: 0.9em;
+    text-align: center;
+    margin: 2rem auto 0;
+
+    th,
+    td {
+      padding: 8px;
+      border: 0;
+    }
+
+    td {
+      border-top: 1px solid $border-color;
+    }
+
+    th {
+      font-weight: bold;
+
+      &.tableTitle {
+        font-size: 1.15rem;
+        text-transform: uppercase;
+        color: $primary;
+        font-style: italic;
+        font-weight: 400;
+      }
+    }
+
+    tr {
+      &:nth-child(even) {
+        background: $row-alt;
+      }
+    }
+
+    .acceleration {
+      width: 60%;
+    }
+  }
+}

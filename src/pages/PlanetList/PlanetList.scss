@@ -1,0 +1,78 @@
+@use "../../styles/mixins" as *;
+
+.planet-list {
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  min-width: 66%;
+  flex-direction: column;
+  margin: 0 auto 3rem;
+  padding: 20px;
+
+  &__title {
+    color: $primary;
+    padding-bottom: 1rem;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.66rem;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid $primary;
+    font-size: 0.9em;
+    text-align: center;
+
+    th,
+    td {
+      padding: 8px;
+      border: 1px solid $border-color;
+    }
+
+    th {
+      background: darken($bg-color, 5%);
+      color: $primary;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+
+      &.noClick {
+        cursor: default;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    tr {
+      &:nth-child(even) {
+        background: $row-alt;
+      }
+    }
+  }
+
+  &__link {
+    color: $primary;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // Alert status highlighting
+  .alert-amber {
+    // background: #8b6f1a;
+    color: #cca634;
+  }
+
+  .alert-red {
+    // background: #8b1a1a;
+    color: #cc3434;
+  }
+}

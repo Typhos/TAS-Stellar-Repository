@@ -1,0 +1,42 @@
+@use "../../styles/mixins" as *;
+
+.jumpTimeTable {
+  min-width: 66%;
+  border-collapse: collapse;
+  border: 1px solid $border-color;
+  font-size: 0.9em;
+  text-align: center;
+  margin-top: 2rem;
+
+  th,
+  td {
+    padding: 8px;
+    border: 0;
+  }
+
+  td {
+    border-top: 1px solid $border-color;
+  }
+
+  th {
+    font-weight: bold;
+
+    &.tableTitle {
+      font-size: 1.15rem;
+      text-transform: uppercase;
+      color: $primary;
+      font-style: italic;
+      font-weight: 400;
+    }
+  }
+
+  tr {
+    &:nth-child(even) {
+      background: $row-alt;
+    }
+  }
+
+  .acceleration {
+    width: 60%;
+  }
+}

@@ -1,0 +1,136 @@
+@use "../../styles/mixins" as *;
+
+.planet-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+  font-family: "IBM Plex Mono", monospace;
+  color: #ddd;
+  background: #121212;
+
+  &__header {
+    padding: 2rem 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: $max-page-width;
+  }
+
+  &__name {
+    color: $primary;
+    font-style: italic;
+    font-size: 2.66rem;
+    line-height: 0.5em;
+  }
+
+  &__map {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+
+    &--heading {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__description {
+    columns: 2;
+    column-gap: 2rem;
+  }
+
+  &__columns {
+    display: flex;
+    gap: 3rem;
+    align-items: stretch; // Ensures equal height
+    justify-content: space-between;
+    width: 100%;
+    margin: 3rem 0;
+  }
+
+  &__economic,
+  &__metrics {
+    flex: 1;
+    padding: 0rem 1rem 2rem;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+
+    strong {
+      color: $secondary;
+    }
+  }
+
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  ul {
+    flex-grow: 1; // Allows content to expand but keeps both boxes equal height
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding: 5px 0;
+      border-bottom: 1px solid #444;
+
+      strong {
+        color: $secondary;
+      }
+    }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid $primary;
+    font-size: 0.9em;
+    text-align: center;
+    margin-top: auto; // Pushes table to bottom if needed
+
+    th,
+    td {
+      padding: 8px;
+      border: 1px solid #444;
+    }
+
+    th {
+      background: #222;
+      color: $primary;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    tr {
+      &:nth-child(even) {
+        background: #1e1e1e;
+      }
+    }
+  }
+
+  // Make sure layout adjusts well on smaller screens
+  @media (max-width: 900px) {
+    &__columns {
+      flex-wrap: wrap; // Stacks vertically if needed
+    }
+
+    &__economic,
+    &__metrics {
+      min-width: 100%; // Full width on small screens
+    }
+
+    &__map {
+      max-width: 100%; // Allow map to scale for mobile
+    }
+  }
+}
+
+.bottom-border {
+  border-bottom: 2px solid $primary;
+  display: flex;
+  width: 100%;
+}
