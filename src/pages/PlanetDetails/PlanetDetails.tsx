@@ -179,10 +179,16 @@ const PlanetDetails: React.FC = () => {
       {planet.description.length > 0 && (
         <>
           <h2 className=" bottom-border">Planetary Description</h2>
-          <div
-            className="planet-details__description"
-            dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(planet.description.join("")) }}
-          />
+          <div className="planet-details__description">
+            {planet.description.map((section) => {
+              return (
+                <section
+                  className="planet-details__description--section"
+                  dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(section) }}
+                />
+              );
+            })}
+          </div>
         </>
       )}
     </div>
