@@ -1,20 +1,32 @@
 $page-width: 90%;
-$max-page-width: 1440px;
-// $max-page-width: 1200px;
+$max-page-width: 1080px;
 
 $bg-color: #121212;
 $primary: #27dfff;
-$primary-alt: #00bfe0;
-$secondary: #646cff;
-$secondary-alt: #646cff;
+$primary-alt: #1da5bd;
+$secondary: #8389ff;
+$secondary-alt: #4958ff;
 
 $border-color: #444;
 $text-color: #ddd;
 $header-color: #bbb;
-$row-alt: #1e1e1e;
+$row-alt: #101010;
 $input-bg: #222;
 
 $link-color: #ff7700;
 
 $white: #ffffff;
 $black: #000000;
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  }
+}

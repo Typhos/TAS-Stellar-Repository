@@ -44,7 +44,7 @@ const PlanetDetails: React.FC = () => {
   }, [mapSrc]);
 
   return (
-    <>
+    <div className="planet-details">
       <div className="planet-details__header bottom-border">
         <h2 className="planet-details__name">{planet.name}</h2>
         <div className="uwp-container">
@@ -56,12 +56,6 @@ const PlanetDetails: React.FC = () => {
         {/* Economic Data */}
         <div className="planet-details__economic">
           <h2 className="">Economic Information</h2>
-          {planet.gasGiants.length > 0 && (
-            <p>
-              <strong>Gas Giant{planet.gasGiants.length > 1 ? "s" : ""}:</strong> {planet.gasGiants.join(", ")}
-            </p>
-          )}
-
           <h3>Starport</h3>
           <ul>
             <li>
@@ -97,7 +91,16 @@ const PlanetDetails: React.FC = () => {
               <strong>Total Docking Space:</strong> {starportInfo?.dockingSpace}
             </li>
           </ul>
-
+          {planet.gasGiants.length > 0 && (
+            <>
+              <h3>Gas Giant{planet.gasGiants.length > 1 ? "s" : ""}</h3>
+              <ul>
+                {planet.gasGiants?.map((planet) => {
+                  return <li key={planet}>{planet}</li>;
+                })}
+              </ul>
+            </>
+          )}
           <h3>Trade Classifications and Remarks</h3>
           <ul>
             {planet.tradeCodes?.map((code) => {
@@ -114,44 +117,45 @@ const PlanetDetails: React.FC = () => {
         {/* Planetary Metrics */}
         <div className="planet-details__metrics">
           <h2 className="">Planetary Metrics</h2>
-          <div>
+          <ul>
             {planet.moons?.length > 0 && (
-              <p>
+              <li>
                 <strong>Moons:</strong> {planet.moons.join(", ")}
-              </p>
+              </li>
             )}
             {planet.moons?.length === 0 && (
-              <p>
+              <li>
                 <strong>Moons:</strong> None
-              </p>
+              </li>
             )}
             {planet.diameter && (
-              <p>
+              <li>
                 <strong>Diameter:</strong> {planet.diameter} km
-              </p>
+              </li>
             )}
             {planet.gravity && (
-              <p>
+              <li>
                 <strong>Gravity:</strong> {planet.gravity} G
-              </p>
+              </li>
             )}
             {planet.orbitalPeriod && (
-              <p>
+              <li>
                 <strong>Orbital Period:</strong> {planet.orbitalPeriod}
-              </p>
+              </li>
             )}
             {planet.distanceFromStarAU && (
-              <p>
+              <li>
                 <strong>Distance from Star:</strong> {planet.distanceFromStarAU} AU
-              </p>
+              </li>
             )}
             {planet.temperatures && (
-              <p>
+              <li>
                 <strong>Day/Night Temps:</strong> {planet.temperatures.daytime}°C / {planet.temperatures.nighttime}°C
-              </p>
+              </li>
             )}
-            {planet.diameter && <JumpTimeTable diameterKm={planet.diameter} />}
-          </div>
+          </ul>
+
+          {planet.diameter && <JumpTimeTable diameterKm={planet.diameter} />}
         </div>
       </div>
 
@@ -171,7 +175,7 @@ const PlanetDetails: React.FC = () => {
           />
         </>
       )}
-    </>
+    </div>
   );
 };
 

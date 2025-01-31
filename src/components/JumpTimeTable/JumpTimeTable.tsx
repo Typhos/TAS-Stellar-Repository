@@ -43,7 +43,7 @@ const JumpTimeTable: React.FC<JumpTimeTableProps> = ({ diameterKm }) => {
           </th>
         </tr>
         <tr>
-          <th className="acceleration">Acceleration (G)</th>
+          <th className="acceleration">Thrust (G)</th>
           <th className="time">Time</th>
         </tr>
       </thead>

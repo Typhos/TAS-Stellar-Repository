@@ -64,7 +64,7 @@ const StellarTravelTime = () => {
 
   return (
     <div className="stellar-calculator">
-      <h2>Stellar Travel Time Calculator</h2>
+      <h2>Travel Time Calculator</h2>
 
       {/* Tabs */}
       <div className="tabs">

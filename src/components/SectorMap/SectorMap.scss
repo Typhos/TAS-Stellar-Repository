@@ -1,25 +1,45 @@
 @use "../../styles/mixins" as *;
 
-.sector-map {
-  width: calc($max-page-width);
-  margin: 0 auto;
-}
+// .sector-map {
+//   width: calc($max-page-width);
+//   margin: 0 auto;
+// }
 
-// Hex styling
-.hex {
-  transition: fill 0.3s ease;
-}
+// // Hex styling
+// .hex {
+//   transition: fill 0.3s ease;
+// }
 
-.hex.empty {
-  fill: none;
-  stroke: #444;
-}
+// .hex.empty {
+//   fill: none;
+//   stroke: #444;
+// }
 
-.hex.planet {
-  cursor: pointer;
-  background-color: none;
+// .hex.planet {
+//   cursor: pointer;
+//   background-color: none;
 
-  &:hover {
-    stroke: cyan;
+//   &:hover {
+//     stroke: cyan;
+//   }
+// }
+.sector-map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  max-width: 1920px;
+  overflow: hidden; // Prevents scrollbars from appearing
+
+  .sector-map {
+    // width: 100%;
+    height: auto;
+    // max-width: 100%;
+    // max-height: 90vh;
+    object-fit: contain;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 }

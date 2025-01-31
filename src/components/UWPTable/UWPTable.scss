@@ -1,5 +1,14 @@
+@use "../../styles/mixins" as *;
+
 $cell-size: 3rem;
 $font-size: 1.8rem;
+
+.uwp-container {
+  @include respond-to(mobile) {
+    display: flex;
+    justify-content: center;
+  }
+}
 
 .uwp-table {
   font-family: "JetBrains Mono", serif;
@@ -10,9 +19,17 @@ $font-size: 1.8rem;
   line-height: calc($font-size / 2);
   text-align: center;
 
+  @include respond-to(mobile) {
+    margin-bottom: 2rem;
+  }
+
   &__explanations {
-    font-size: 10px;
+    font-size: calc($font-size / 3);
     line-height: $font-size;
+
+    @include respond-to(mobile) {
+      display: none;
+    }
   }
 
   &__tradeCodes {
@@ -28,11 +45,23 @@ $font-size: 1.8rem;
   background: black;
   color: white;
 
+  @include respond-to(mobile) {
+    $mobile-cell-size: calc($cell-size / 1.3);
+
+    font-size: calc($font-size / 1.5);
+    width: $mobile-cell-size;
+    height: $mobile-cell-size;
+  }
+
   &.trade-codes {
     padding: 0 calc($font-size / 2);
     width: auto;
     border-color: black;
     font-size: calc($font-size / 1.3);
+
+    @include respond-to(mobile) {
+      display: none;
+    }
   }
 }
 
@@ -42,4 +71,10 @@ $font-size: 1.8rem;
   font-weight: bold;
   background: black;
   color: white;
+
+  &.tradeCodes--dash {
+    @include respond-to(mobile) {
+      display: none;
+    }
+  }
 }

@@ -75,7 +75,7 @@ button:disabled {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.66rem;
   font-weight: 500;
   font-style: italic;
   color: $primary;
@@ -86,14 +86,16 @@ h2 {
   color: $primary;
   font-weight: 700;
   text-transform: uppercase;
+  padding: 0;
+  margin: 1em 0;
 }
 
 h3 {
   font-size: 1.2rem;
-  margin: 2em 0 0;
-  // color: $primary;
+  margin: 0.75em 0 0.5em;
   font-style: italic;
   font-weight: 500;
+  color: $secondary-alt;
 }
 
 .header {
@@ -107,7 +109,6 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    min-width: $max-page-width;
   }
 
   &__appName {
@@ -119,8 +120,35 @@ h3 {
     display: flex;
     gap: 2rem;
 
+    ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+    }
+
     a {
       text-decoration: none;
+    }
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-inline-start: 1rem;
+
+  li {
+    padding: 0;
+    margin-bottom: 0.33rem;
+
+    strong {
+      color: $secondary;
     }
   }
 }
@@ -136,8 +164,15 @@ footer {
 .header__shell,
 main {
   display: flex;
-  width: $page-width;
+  width: 100%;
   max-width: $max-page-width;
+  padding: 0 2rem;
+
+  @include respond-to(mobile) {
+    padding: 0 0.6rem; // Less padding on smaller screens
+    width: 100%;
+    max-width: calc(100vw - 1.2rem);
+  }
 }
 
 main {
@@ -158,9 +193,68 @@ main {
   font-size: 1.66rem;
 }
 
-@media screen and (max-width: 600px) {
-  main,
-  .planet-details {
-    width: 100%;
+@media (max-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+    h1 {
+      font-size: 1.2rem;
+    }
+
+    .menu-toggle {
+      display: block;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: white;
+      padding: 1rem;
+    }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 4.5rem;
+      right: 10px;
+      background: #222;
+      border: 1px solid #444;
+      border-radius: 5px;
+      width: 200px;
+
+      &__sectorMap {
+        display: none;
+      }
+    }
+
+    .nav-links.open {
+      display: flex;
+    }
+
+    .nav-links ul {
+      list-style: none;
+      flex-direction: column;
+      gap: 0;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-links li {
+      padding: 10px;
+      border-bottom: 1px solid #444;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  // Hide sector map on mobile
+  .sector-map-container {
+    display: none;
   }
 }

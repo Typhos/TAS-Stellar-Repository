@@ -1,15 +1,7 @@
 @use "../../styles/mixins" as *;
 
 .planet-details {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  max-width: 1000px;
-  margin: auto;
-  font-family: "IBM Plex Mono", monospace;
-  color: #ddd;
-  background: #121212;
+  font-size: 14px;
 
   &__header {
     padding: 2rem 0 1rem;
@@ -17,6 +9,16 @@
     justify-content: space-between;
     align-items: baseline;
     width: $max-page-width;
+
+    @include respond-to(mobile) {
+      padding: 0 0.6rem; // Less padding on smaller screens
+      width: 100%;
+      // max-width: calc(100vw - 1.2rem);
+
+      flex-direction: column;
+      align-items: center;
+      margin-top: 1rem;
+    }
   }
 
   &__name {
@@ -24,6 +26,10 @@
     font-style: italic;
     font-size: 2.66rem;
     line-height: 0.5em;
+
+    @include respond-to(mobile) {
+      font-size: 2rem;
+    }
   }
 
   &__map {
@@ -39,6 +45,10 @@
   &__description {
     columns: 2;
     column-gap: 2rem;
+
+    @include respond-to(mobile) {
+      columns: unset;
+    }
   }
 
   &__columns {
@@ -48,6 +58,12 @@
     justify-content: space-between;
     width: 100%;
     margin: 3rem 0;
+
+    @include respond-to(mobile) {
+      // width: 80%;
+      padding: 0;
+      justify-content: center;
+    }
   }
 
   &__economic,
@@ -58,79 +74,50 @@
     border-radius: 5px;
     display: flex;
     flex-direction: column;
+    width: auto;
 
     strong {
       color: $secondary;
     }
   }
 
-  h2 {
-    margin-bottom: 10px;
-  }
-
-  ul {
-    flex-grow: 1; // Allows content to expand but keeps both boxes equal height
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
-    li {
-      padding: 5px 0;
-      border-bottom: 1px solid #444;
-
-      strong {
-        color: $secondary;
-      }
-    }
-  }
-
-  table {
+  .bottom-border {
+    border-bottom: 2px solid $primary;
+    display: flex;
     width: 100%;
-    border-collapse: collapse;
-    border: 1px solid $primary;
-    font-size: 0.9em;
-    text-align: center;
-    margin-top: auto; // Pushes table to bottom if needed
-
-    th,
-    td {
-      padding: 8px;
-      border: 1px solid #444;
-    }
-
-    th {
-      background: #222;
-      color: $primary;
-      font-weight: bold;
-      text-transform: uppercase;
-    }
-
-    tr {
-      &:nth-child(even) {
-        background: #1e1e1e;
-      }
-    }
   }
 
   // Make sure layout adjusts well on smaller screens
   @media (max-width: 900px) {
+    &__header {
+      width: 80%;
+
+      &.bottom-border {
+        // border: 0;
+      }
+    }
+
     &__columns {
-      flex-wrap: wrap; // Stacks vertically if needed
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
     }
 
     &__economic,
     &__metrics {
-      min-width: 100%; // Full width on small screens
+      width: 90%; // Full width on small screens
     }
 
     &__map {
-      max-width: 100%; // Allow map to scale for mobile
+      width: 100%; // Allow map to scale for mobile
+    }
+
+    .bottom-border {
+      max-width: 100vw;
+      padding: 0;
     }
   }
-}
-
-.bottom-border {
-  border-bottom: 2px solid $primary;
-  display: flex;
-  width: 100%;
 }

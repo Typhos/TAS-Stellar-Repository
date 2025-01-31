@@ -1,25 +1,29 @@
 @use "../../styles/mixins" as *;
 
 .jumpTimeTable {
-  min-width: 66%;
+  width: auto;
   border-collapse: collapse;
-  border: 1px solid $border-color;
+  border: 0px solid $border-color;
   font-size: 0.9em;
   text-align: center;
   margin-top: 2rem;
+  width: 50%;
+
+  @include respond-to(mobile) {
+    margin: inherit auto;
+    width: 95%;
+  }
 
   th,
   td {
-    padding: 8px;
     border: 0;
-  }
-
-  td {
-    border-top: 1px solid $border-color;
+    width: 50%;
   }
 
   th {
     font-weight: bold;
+    background: black;
+    border-bottom: 1.5px solid $primary;
 
     &.tableTitle {
       font-size: 1.15rem;
@@ -27,16 +31,18 @@
       color: $primary;
       font-style: italic;
       font-weight: 400;
+      border-bottom: 0;
     }
+  }
+
+  td {
+    padding: 0.75em;
+    // line-height: 3em;
   }
 
   tr {
     &:nth-child(even) {
       background: $row-alt;
     }
-  }
-
-  .acceleration {
-    width: 60%;
   }
 }

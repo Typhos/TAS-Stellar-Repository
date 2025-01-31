@@ -17,7 +17,7 @@ const UWPTable: React.FC<{ uwp: string; tradeCodes: string[] | undefined }> = ({
               {char}
             </td>
           ))}
-          <td className="uwp-dash"></td>
+          <td className="uwp-dash tradeCodes--dash"></td>
           <td key="tradeCodes" className="uwp-cell trade-codes">
             {tradeCodes?.join(" ")}
           </td>
@@ -32,7 +32,7 @@ const UWPTable: React.FC<{ uwp: string; tradeCodes: string[] | undefined }> = ({
           <td>Law</td>
           <td></td>
           <td>Tech</td>
-          <td></td>
+          <td className=""></td>
           <td className="uwp-table__tradeCodes" colSpan={tradeCodes?.length}>
             Trade Codes
           </td>
