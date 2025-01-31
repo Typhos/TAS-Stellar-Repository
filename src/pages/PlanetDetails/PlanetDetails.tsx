@@ -34,7 +34,7 @@ const PlanetDetails: React.FC = () => {
   }
 
   const mapFileName = `${planet?.name}-${planet.uwp}.png`;
-  const mapSrc = `/images/planetMaps/${mapFileName}`;
+  const mapSrc = `${import.meta.env.BASE_URL}images/planetMaps/${mapFileName}`;
 
   useEffect(() => {
     const img = new Image();
@@ -158,7 +158,7 @@ const PlanetDetails: React.FC = () => {
       {mapExists && (
         <>
           <h2 className="planet-details__map--heading  bottom-border">Surface Map</h2>
-          <img className="planet-details__map" src={`/images/planetMaps/${mapFileName}`} alt={`${planet.name} Map`} />
+          <img className="planet-details__map" src={mapSrc} alt={`${planet.name} Map`} />
         </>
       )}
 

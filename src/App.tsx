@@ -1,7 +1,7 @@
 import "./styles/App.scss";
 
 import React, { useLayoutEffect } from "react";
-import { Route, BrowserRouter as Router, Routes, useLocation } from "react-router-dom";
+import { Route, HashRouter as Router, Routes, useLocation } from "react-router-dom";
 
 import HomePage from "./pages/SectorMap";
 import PageLayout from "./components/Layout/PageLayout";
