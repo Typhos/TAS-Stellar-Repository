@@ -69,6 +69,11 @@ const PlanetDetails: React.FC = () => {
                 <strong>Types:</strong> {portTypes}
               </li>
             )}
+            {planet.weeklyTraffic && (
+              <li>
+                <strong>Traffic:</strong> {planet.weeklyTraffic} starships/week
+              </li>
+            )}
             <li>
               <strong>Berthing Fees (weekly):</strong> {getBerthingFees(planet.berthing, planet.uwp)}
             </li>
@@ -118,6 +123,11 @@ const PlanetDetails: React.FC = () => {
         <div className="planet-details__metrics">
           <h2 className="">Planetary Metrics</h2>
           <ul>
+            {planet.rings?.length > 0 && (
+              <li>
+                <strong>Planetary Ring{planet.rings?.length > 1 ? "s" : ""}:</strong> {planet.rings.join(", ")}
+              </li>
+            )}
             {planet.moons?.length > 0 && (
               <li>
                 <strong>Moons:</strong> {planet.moons.join(", ")}

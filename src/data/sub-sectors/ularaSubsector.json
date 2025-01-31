@@ -106,6 +106,7 @@
       "gasGiants": ["Alea (GLD)", "Lorix (GS4)", "Batrov (GM8)", "Munak (GMB)"],
       "bases": ["Scout"],
       "berthing": 100,
+      "weeklyTraffic": 10,
       "alert": "",
       "moons": [],
       "diameter": 7695,
@@ -136,7 +137,7 @@
       "moons": []
     },
     {
-      "name": "Breclan",
+      "name": "Caerula",
       "col": 2,
       "row": 9,
       "uwp": "A89A7BB-E",
@@ -148,7 +149,7 @@
       "moons": []
     },
     {
-      "name": "Jorvek",
+      "name": "Abyss Station",
       "col": 3,
       "row": 0,
       "uwp": "D000687-9",
@@ -364,11 +365,39 @@
       "row": 4,
       "uwp": "E752520-4",
       "tradeCodes": ["Lt", "Ni", "Po", "Ho"],
-      "gasGiants": ["placeholder"],
+      "gasGiants": ["Teide (GM8)", "Oleka (GS4)", "Shivani (GS5)"],
       "bases": [],
-      "description": [],
+      "weeklyTraffic": 3,
       "alert": "Amber",
-      "moons": []
+      "moons": [],
+      "rings": ["R01:0.65-0.17 "],
+      "diameter": 11661,
+      "gravity": 0.91,
+      "orbitalPeriod": "437D 6H",
+      "distanceFromStarAU": 1.18,
+      "temperatures": {
+        "daytime": 47,
+        "nighttime": 22
+      },
+      "description": [
+        "<h3>Introduction</h3><p><strong>Asherah</strong> is a harsh, arid world where survival is dictated by limited water resources, a tightly-knit society, and deep-rooted traditions. Life revolves around <strong>Concord</strong>, the planet’s only major city, and its starport, <strong>Gateway</strong>, which serves as a political, commercial, and cultural hub. The planet's primary export, salt, shapes not only its economy but also its social norms and rituals.</p>",
+
+        "<h3>Geography and Climate</h3><p>Asherah is a dry, hot world with a thin but breathable atmosphere (Type 5) and minimal surface water, covering only 20% of the planet. The singular major body of water acts as the planet’s primary heat sink, moderating temperatures in coastal areas but leaving the interior vulnerable to extreme daily temperature swings. Even in <strong>Concord</strong>, temperatures drop significantly at night, leading to an early nightlife culture where most residents are indoors by late evening.</p><p>The land consists of vast salt flats, rocky deserts, and scattered mesas, with little vegetation outside of cultivated areas. High winds and dust storms are common, forcing settlements to be built with environmental hazards in mind.</p>",
+
+        "<h3>History</h3><p>Originally settled as a minor colony for mineral extraction, Asherah’s development was slow due to its inhospitable environment. Over time, the planet's salt deposits became its primary economic asset, leading to the rise of a trade-based society centered around <strong>Gateway</strong>. The starport grew beyond its original function, becoming a symbol of unity and a gathering place for political and cultural events. Today, Asherah remains a frontier world, its people deeply bound to tradition and communal survival.</p>",
+
+        "<h3>Government and Politics</h3><p>Asherah is governed as a <strong>participatory democracy</strong> (Gov 2), where major decisions are made through open forums and community gatherings, typically held in <strong>Gateway</strong>. The lack of formal governance beyond the city limits results in a loose network of settlements operating under mutual agreements. While there are no formal laws (Law Level 0), social norms and collective accountability maintain order. Personal disputes are resolved through negotiation, mediation, or, in extreme cases, exile.</p>",
+
+        "<h3>Economy and Trade</h3><p>The planet’s primary export is <strong>salt</strong>, which is not only a trade commodity but also an integral part of Asherahian culture. Salt is used for preservation, seasoning, and cleaning, with idioms and insults woven around its presence in daily life. Trade with off-world merchants is vital, as Asherah lacks industrial infrastructure and must import most advanced goods and equipment.</p><p>One of the more unusual trade rituals is the <strong>'Gift of Preservation'</strong>, in which a departing starship is given a sealed bottle of Asherah’s ocean water. The tradition serves both as a symbolic farewell and as a mark of goodwill for returning travelers.</p>",
+
+        "<h3>Culture and Society</h3><p>Asherahian society is structured around tradition and ritual, with a strong emphasis on community survival. <strong>Gateway</strong> is more than a starport—it is the heart of Asherahian identity, where ceremonies, trade deals, and social gatherings take place. Arrivals and departures of ships are often marked by public observances, reinforcing the collective spirit of the planet.</p><p>Asherahians value self-sufficiency and perseverance, yet they are also known for their hospitality. Visitors are often welcomed with formalized exchanges of goods or drinks, particularly at establishments like <strong>The Brine Barrel</strong>, Concord’s oldest cantina. Here, the 'Gift of Preservation' tradition grants returning Asherahians a free round, while non-natives receive discounted drinks in recognition of their journey.</p>",
+
+        "<h3>Major Settlements</h3><p>The vast majority of Asherah’s population resides in <strong>Concord</strong>, a sprawling city located on the coast of the planet’s only significant ocean. Built for function rather than aesthetics, Concord features low, sturdy buildings designed to withstand extreme temperatures and high winds. Infrastructure is highly localized, with technology levels dropping sharply outside the city center.</p><p>Beyond Concord, scattered towns and isolated homesteads persist through sheer determination. One of the most notable remote sites is the <strong>Research Station</strong> on the planet’s far side, where scientists study the preserved remains of ancient marine ecosystems trapped in the salt flats. This floating laboratory, built on inflatable pontoons, is a marvel of ingenuity, capable of lowering itself to avoid destruction during high wind storms.</p>",
+
+        "<h3>Technology and Infrastructure</h3><p>Asherah operates at <strong>Tech Level 4</strong>, with industrial capabilities comparable to early modern technological eras. While Gateway maintains a functional power grid and limited mechanization, the further one travels from the city, the more primitive life becomes. Most settlements rely on basic tools, barter systems, and self-sufficiency to survive.</p><p>Air-raft racing is a popular sport on Asherah, with events frequently held over the <strong>Bitterwater Shoal</strong>, a shallow expanse of water southwest of Concord. The location is favored due to its low risk of total loss—though crashes are still deadly, the wreckage is often retrievable.</p>",
+
+        "<h3>Law and Order</h3><p>With a law level of 0, Asherah has no formal restrictions on weaponry, behavior, or commerce. However, social accountability and community reputation play significant roles in maintaining order. Those who disrupt the peace or violate local customs find themselves unwelcome in Concord, effectively exiled by public sentiment.</p><p>Violence is rare within the city, but disputes outside of Concord are often settled informally, and personal responsibility is a cornerstone of Asherahian ethics. Most citizens take pride in their ability to self-govern and view excessive regulation as unnecessary.</p>"
+      ]
     },
     {
       "name": "Zetheron",

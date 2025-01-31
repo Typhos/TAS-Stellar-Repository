@@ -1,7 +1,7 @@
 import { Planet, SubSector } from "../models/stellarModels";
 
-import karvess from "./karvessSubsector.json";
-import ulara from "./ularaSubsector.json";
+import karvess from "./sub-sectors/karvessSubsector.json";
+import ulara from "./sub-sectors/ularaSubsector.json";
 
 const subsectors: SubSector[] = [ulara, karvess]; // List all subsectors here
 

@@ -6,8 +6,10 @@ export interface Planet {
   gasGiants: string[];
   tradeCodes?: string[];
   berthing?: number;
+  weeklyTraffic?: number;
   alert: string;
   moons: string[];
+  rings: string[];
   bases: string[];
   diameter: number;
   gravity: number;
