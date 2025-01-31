@@ -21,6 +21,9 @@ const standardDistances = [
   { label: "Surface to Orbit", value: 10000 },
   { label: "Surface to Moon", value: 400000 },
   { label: "Close Neighbor World", value: 45000000 },
+  { label: "Far Neighbor World", value: 255000000 },
+  { label: "Close Gas Giant", value: 600000000 },
+  { label: "Far Gas Giant", value: 900000000 },
 ];
 
 const convertSecondsToTime = (totalSeconds) => {

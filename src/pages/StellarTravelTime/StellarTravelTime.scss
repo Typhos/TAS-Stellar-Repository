@@ -123,8 +123,9 @@
   // Preset Distance Buttons
   .preset-buttons {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 0.8rem;
+    gap: 1rem;
     margin-top: 1rem;
 
     button {
@@ -133,10 +134,11 @@
       color: $primary;
       padding: 8px 12px;
       border-radius: 5px;
-      font-size: 0.8em;
+      font-size: 1em;
       text-transform: uppercase;
       cursor: pointer;
       transition: 0.3s;
+      min-width: 13rem;
 
       &:hover {
         background: $primary;
