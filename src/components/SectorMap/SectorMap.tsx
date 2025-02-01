@@ -68,7 +68,7 @@ const SectorMap: React.FC = () => {
                         r={10}
                         fill={getPlanetColor(planet.uwp, planet.tradeCodes)}
                         stroke={getStrokeColor(planet.uwp)}
-                        onClick={() => navigate(`/planet/${planet.name.toLowerCase()}`)}
+                        onClick={() => navigate(`/planet/${encodeURIComponent(planet.name.toLowerCase())}`)}
                       />
                     )}
 
@@ -80,7 +80,7 @@ const SectorMap: React.FC = () => {
                         y={y - 25}
                         width="50"
                         height="50"
-                        onClick={() => navigate(`/planet/${planet.name.toLowerCase()}`)}
+                        onClick={() => navigate(`/planet/${encodeURIComponent(planet.name.toLowerCase())}`)}
                       />
                     )}
 
@@ -91,7 +91,7 @@ const SectorMap: React.FC = () => {
                         stroke={planet.alert === "Amber" ? "#ffbf00" : "#ff0000"}
                         strokeWidth={2}
                         fill="none"
-                        onClick={() => navigate(`/planet/${planet.name.toLowerCase()}`)}
+                        onClick={() => navigate(`/planet/${encodeURIComponent(planet.name.toLowerCase())}`)}
                       />
                     )}
 
@@ -103,7 +103,7 @@ const SectorMap: React.FC = () => {
                       fontSize="20"
                       fontWeight="bold"
                       fill="white"
-                      onClick={() => navigate(`/planet/${planet.name.toLowerCase()}`)}
+                      onClick={() => navigate(`/planet/${encodeURIComponent(planet.name.toLowerCase())}`)}
                     >
                       {planet.uwp ? planet.uwp[0] : "?"}
                     </text>
@@ -115,7 +115,7 @@ const SectorMap: React.FC = () => {
                       textAnchor="middle"
                       fontSize="12"
                       fill="white"
-                      onClick={() => navigate(`/planet/${planet.name.toLowerCase()}`)}
+                      onClick={() => navigate(`/planet/${encodeURIComponent(planet.name.toLowerCase())}`)}
                     >
                       {planet.uwp}
                     </text>
@@ -128,7 +128,7 @@ const SectorMap: React.FC = () => {
                       fontSize="12"
                       fontWeight="bold"
                       fill="white"
-                      onClick={() => navigate(`/planet/${planet.name.toLowerCase()}`)}
+                      onClick={() => navigate(`/planet/${encodeURIComponent(planet.name.toLowerCase())}`)}
                     >
                       {planet.name}
                     </text>
@@ -141,7 +141,7 @@ const SectorMap: React.FC = () => {
                         y={y - HEX_SIZE / 3}
                         width="15"
                         height="15"
-                        onClick={() => navigate(`/planet/${planet.name.toLowerCase()}`)}
+                        onClick={() => navigate(`/planet/${encodeURIComponent(planet.name.toLowerCase())}`)}
                       />
                     )}
 
@@ -150,7 +150,7 @@ const SectorMap: React.FC = () => {
                       points={points}
                       stroke="gray"
                       fill="transparent"
-                      onClick={() => navigate(`/planet/${planet.name.toLowerCase()}`)}
+                      onClick={() => navigate(`/planet/${encodeURIComponent(planet.name.toLowerCase())}`)}
                       onMouseEnter={(e) => {
                         e.target.style.stroke = "orange";
                         e.target.style.cursor = "pointer";

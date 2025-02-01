@@ -121,23 +121,30 @@ const PlanetDetails: React.FC = () => {
 
         {/* Planetary Metrics */}
         <div className="planet-details__metrics">
-          <h2 className="">Planetary Metrics</h2>
+          <h2 className="">Planetary Details</h2>
+          {planet.rings?.length > 0 && (
+            <p>
+              <strong>Planetary Ring{planet.rings?.length > 1 ? "s" : ""}:</strong> {planet.rings.join(", ")}
+            </p>
+          )}
+          {planet.moons?.length > 0 && (
+            <>
+              <h3>Moon{planet.moons?.length > 1 ? "s" : ""}</h3>
+              <ol>
+                {planet.moons?.map((moon) => {
+                  return <li key={moon}>{moon}</li>;
+                })}
+              </ol>
+            </>
+          )}
+          {planet.moons?.length === 0 && (
+            <>
+              <h3>Moons</h3>
+              <p>No significant satellites</p>
+            </>
+          )}
+          <h3>Metrics</h3>
           <ul>
-            {planet.rings?.length > 0 && (
-              <li>
-                <strong>Planetary Ring{planet.rings?.length > 1 ? "s" : ""}:</strong> {planet.rings.join(", ")}
-              </li>
-            )}
-            {planet.moons?.length > 0 && (
-              <li>
-                <strong>Moons:</strong> {planet.moons.join(", ")}
-              </li>
-            )}
-            {planet.moons?.length === 0 && (
-              <li>
-                <strong>Moons:</strong> None
-              </li>
-            )}
             {planet.diameter && (
               <li>
                 <strong>Diameter:</strong> {planet.diameter} km

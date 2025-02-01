@@ -41,7 +41,7 @@ const PlanetList: React.FC = () => {
           {sortedPlanets.map((planet) => (
             <tr key={planet.name}>
               <td>
-                <Link to={`/planet/${planet.name.toLowerCase()}`} className="planet-list__link">
+                <Link to={`/planet/${encodeURIComponent(planet.name.toLowerCase())}`} className="planet-list__link">
                   {planet.name}
                 </Link>
               </td>
