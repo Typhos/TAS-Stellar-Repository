@@ -204,8 +204,8 @@ const PlanetDetails: React.FC = () => {
 
 const getPortTypes = (planet: Planet) => {
   if (planet.uwp[0] === "X") return null;
-  if (planet.bases.includes("Highport")) return "Highport & Lowport";
-  return "Lowport Only";
+  if (planet.bases.includes("Highport")) return "Highport & Downport";
+  return "Downport Only";
 };
 
 const getBerthingFees = (fee: number | undefined, uwp: string) => {

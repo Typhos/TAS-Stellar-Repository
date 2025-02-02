@@ -9,16 +9,34 @@
       "tradeCodes": ["Lo", "Lt", "Ho"],
       "gasGiants": ["Ocrora (GMC)", "Naade (GM7)"],
       "bases": [],
-      "description": [],
       "alert": "",
       "moons": [],
-      "diameter": 3239,
-      "orbitalPeriod": "204D 8H",
-      "distanceFromStarAU": 0.61,
+      "diameter": 4353,
+      "gravity": 0.35,
+      "orbitalPeriod": "577D 10H",
+      "distanceFromStarAU": 1.42,
       "temperatures": {
-        "daytime": 223,
-        "nighttime": -146
-      }
+        "daytime": 42,
+        "nighttime": 33
+      },
+      "description": [
+        "<p><strong>Aerenis</strong> is a small, rugged world marked by its harsh climate, sparse population, and primitive technological development. Its thin atmosphere and searing temperatures create an environment that is challenging for long-term habitation, with most of the population clustered in small settlements near scarce water sources. With only about <strong>5,000 inhabitants</strong>, Aerenis is a world on the fringes of interstellar civilization, surviving through determination, basic industry, and trade with passing starships.</p><p>The planet is governed as a <strong>Participating Democracy</strong>, where local councils make decisions by popular vote. Despite this democratic structure, life on Aerenis is defined more by survival than politics, with strong community ties and a culture that values self-reliance. The downport, though classified as a <strong>D-grade facility</strong>, acts as the lifeline for off-world goods and occasional travelers.</p>",
+
+        "<h3>Environment and Climate</h3><p>Aerenis is a small planet with a diameter of <strong>4,353 km</strong> and a low gravity of <strong>0.35g</strong>. The atmosphere is <strong>dense (Type 8)</strong>, breathable but thick enough to create oppressive conditions, especially during the blistering daytime heat. Temperatures soar to an average of <strong>42°C during the day</strong> and drop to <strong>33°C at night</strong>, with seasonal extremes reaching both dangerously high and surprisingly low temperatures.</p><p>Surface water covers only <strong>27% of the planet</strong>, scattered in small lakes and shallow inland seas. The absence of native life has left Aerenis barren, with rocky deserts and rugged highlands dominating the landscape. Occasional seismic activity adds to the environmental hazards, especially near the fault lines that cross the planet’s crust.</p>",
+
+        "<h3>Government and Law</h3><p>Aerenis operates under a <strong>Participating Democracy</strong>, where decisions are made through local assemblies and community votes. This system works due to the planet’s small population, allowing most citizens to have a direct say in governance. However, the harsh living conditions often mean that practical leadership falls to those with experience and resource control rather than purely democratic processes.</p><p>With a <strong>Law Level of 4</strong>, Aerenis enforces moderate restrictions. <strong>Laser and beam weapons are prohibited</strong>, while traditional firearms, melee weapons, and simple explosives are common among settlers for both defense and hunting. Law enforcement is decentralized, handled by community militias or local leaders when necessary.</p>",
+
+        "<h3>Culture and Society</h3><p>Aerenis has a rugged, frontier culture shaped by its environment. The people are <strong>highly self-reliant</strong>, valuing hard work, resourcefulness, and personal freedom. Despite the democratic government, there is a strong emphasis on individual responsibility, with little patience for those who cannot contribute to the survival of their community.</p><p>Social structures are simple, with small towns and scattered homesteads. The lack of native life has led to a reliance on imported foodstuffs and primitive agriculture, often supported by basic irrigation systems. <strong>Community gatherings, storytelling, and local festivals</strong> are key to maintaining morale in the face of environmental hardship.</p>",
+
+        "<h3>Economy and Industry</h3><p>The economy of Aerenis is primitive, reflecting its <strong>Tech Level 3</strong>, equivalent to an early industrial society. Energy is generated through <strong>coal and steam power</strong>, and transportation relies on <strong>sailing ships, carts, and simple rail systems</strong> where possible. The planet’s limited resources include <strong>ore deposits, basic agricultural products, and handcrafted goods</strong>.</p><p><strong>Primary Exports:</strong></p><ul><li>Raw ore and minerals</li><li>Basic agricultural products</li><li>Handcrafted tools and goods</li></ul><p><strong>Primary Imports:</strong></p><ul><li>Advanced medical supplies</li><li>Off-world technology and equipment</li><li>Luxury goods for trade and morale</li></ul><p>While not a major trading hub, Aerenis occasionally attracts traders seeking raw materials or unique local crafts. The <strong>D-grade downport</strong> serves as the planet’s primary link to interstellar commerce, offering basic refueling with unrefined hydrogen and minor repair facilities. Most interstellar traffic is limited to tramp freighters and opportunistic traders.</p>",
+
+        "<h3>Transportation and Infrastructure</h3><p>Transportation on Aerenis is limited by its <strong>low technology level</strong>. Most goods and people are moved using <strong>animal-drawn carts, steam-powered vehicles, and simple sailing vessels</strong> on inland waterways. Roads between settlements are rough and poorly maintained, often little more than dirt tracks carved through rocky terrain.</p><p>The planet’s <strong>downport</strong> is functional but basic, providing <strong>minor repair services</strong> and unrefined hydrogen fuel. There are <strong>no shipyards</strong> or advanced facilities, and most starships rely on their own supplies when visiting. The system's <strong>two mid-sized gas giants</strong> (Ocrora and Naade) offer potential refueling points for more advanced vessels.</p>",
+
+        "<h3>Key Locations</h3><p><strong>Downport Beltane</strong> – The planet’s only starport, little more than a cluster of landing pads and a few prefabricated buildings. It serves as a trade hub and meeting point for off-world visitors.</p><p><strong>The Iron Basin</strong> – A mineral-rich region known for its small, independent mining communities. Life here is harsh, with miners battling both the environment and each other for control of resources.</p><p><strong>Verdant Reach</strong> – A rare agricultural zone sustained by an underground aquifer. This fertile area supports most of Aerenis’s food production and is fiercely protected by local communities.</p><p><strong>The Broken Ridge</strong> – A seismic fault line prone to frequent quakes. Despite the dangers, it’s rumored to conceal valuable mineral veins and ancient alien artifacts, attracting prospectors and adventurers.</p>"
+      ],
+      "adventureHooks": [
+        "<h3>Adventure Hooks</h3><ul><li><strong>The Missing Delegate:</strong> A government official sent to mediate a land dispute has vanished in the Scarred Wastes. Was it bandits, corporate sabotage, or something older beneath the ground?</li><li><strong>The Broken Treaty:</strong> Tensions rise between rival settlements after a **critical water supply is poisoned**. The crew is hired to investigate, but the culprit may be closer to home than expected.</li><li><strong>Secrets in the Dust:</strong> A crashed starship from a bygone era is discovered half-buried in a remote desert. **Treasure hunters, local warlords, and corporate agents** race to claim its secrets.</li><li><strong>The Iron Veil Heist:</strong> A local rebel group plans to hijack an armored rail convoy carrying rare ores. They need a crew with off-world expertise to pull it off—or stop it.</li><li><strong>Lost in the Dust:</strong> A survey team has gone missing near the Broken Ridge. The local council offers a reward for their safe return—or confirmation of their fate.</li><li><strong>The Smuggler’s Run:</strong> A trader seeks a crew to transport illegal tech past local patrols, promising high pay but plenty of risks.</li><li><strong>The Water Wars:</strong> Rival settlements clash over control of the Verdant Reach aquifer, and tensions are about to boil over into violence.</li><li><strong>Echoes Beneath the Earth:</strong> Miners in the Iron Basin have uncovered something ancient—and possibly dangerous—deep underground.</li></ul>"
+      ]
     },
     {
       "name": "Pelagos",
@@ -88,17 +106,29 @@
       "tradeCodes": ["Ba"],
       "gasGiants": ["Tvar (GMC)", "Vortek (GLD)"],
       "bases": [],
-      "description": [],
       "alert": "",
       "berthing": 0,
       "moons": [],
       "diameter": 3239,
+      "gravity": 0.26,
       "orbitalPeriod": "204D 9H",
       "distanceFromStarAU": 0.61,
       "temperatures": {
         "daytime": 223,
         "nighttime": -146
-      }
+      },
+      "description": [
+        "<p><strong>Lunthera</strong> is a barren, desolate world. The planetoid is located in a <strong>binary, red dwarf star system</strong>. The primary star is <strong>Nacon (M2 V)</strong> and its peer is <strong>Zihrun (M3 V)</strong>. Despite its lifeless surface and hostile environment, Lunthera is notable for the remnants of ancient, abandoned facilities scattered across its rocky terrain, hinting at past endeavors now lost to time. The planet’s extreme temperatures, thin tainted atmosphere, and lack of significant population make it a dangerous yet intriguing location for explorers and scavengers alike.</p>",
+
+        "<h3>System Overview</h3><p>The <strong>Lunthera System</strong> is defined by its binary stars, with <strong>Zihrun</strong> orbiting the larger <strong>Nacon</strong> at a staggering 5,391 AU. Nacon hosts several planetary bodies, including a <strong>rad world</strong> close to the star, a violent <strong>storm world</strong>, two massive <strong>gas giants</strong>—<strong>Tvar</strong> and <strong>Vortek</strong>—and distant <strong>ice worlds</strong> lingering in the outer reaches of the system. Zihrun’s own system of planetoids adds to the chaotic stellar dance, making navigation challenging for visiting starships.</p>",
+
+        "<h3>Planetary Environment</h3><p>Lunthera’s surface is a bleak expanse of rocky plains and jagged mountain ranges, with sporadic patches of frozen water locked beneath layers of regolith. The planet experiences brutal temperature extremes, with searing heat during the day (223°C) and bone-chilling cold at night (-146°C). Its thin, tainted atmosphere requires the use of respirators, and sudden, violent dust storms can sweep across the barren landscape with little warning. Despite these harsh conditions, occasional pockets of liquid water exist, remnants of a long-dead hydrological cycle.</p>",
+
+        "<h3>System Features and Points of Interest</h3><p>While Lunthera itself is uncolonized and devoid of permanent settlements, the system holds several key features of interest:</p><ul><li><strong>Tvar (GMC)</strong> – A massive gas giant serving as a vital source of unrefined fuel for passing ships.</li><li><strong>Vortek (GLD)</strong> – Another gas giant, though less frequently utilized due to its greater distance from the main jump routes.</li><li><strong>Ancient Facilities</strong> – Scattered ruins and derelict outposts dot Lunthera’s surface, possibly remnants of early Imperial survey teams or even pre-Imperial endeavors.</li></ul>"
+      ],
+      "adventureHooks": [
+        "<h3>Potential Adventure Hooks</h3><ul><li><strong>The Lost Convoy:</strong> A merchant convoy disappeared near Lunthera, and the players are hired to investigate. Wreckage suggests more than just mechanical failure—piracy, ancient defense systems, or something even stranger?</li><li><strong>Ghost Signals:</strong> Strange signals are emanating from one of Lunthera’s abandoned outposts. Are they automated distress calls, or has someone—or something—reactivated the site?</li><li><strong>The Hidden Cache:</strong> Rumors persist of a lost Imperial scout ship carrying valuable data cores. Finding it could mean fortune—or danger—depending on what the data contains.</li><li><strong>Xeno-Artifact Hunters:</strong> A corporate expedition vanished while exploring the <strong>Void Array</strong>. Rescuing survivors—or recovering what they found—could put the crew in conflict with powerful interests.</li></ul>"
+      ]
     },
     {
       "name": "Skoll",
@@ -144,7 +174,7 @@
       "row": 6,
       "uwp": "E336444-5",
       "tradeCodes": ["Lt", "Ni", "Fr"],
-      "gasGiants": ["placeholder"],
+      "gasGiants": ["Sindri (GMB)", "Min (GLC)", "Lulal (GLG)", "Ekwensu (GS4)"],
       "bases": [],
       "description": [],
       "alert": "",
@@ -161,25 +191,25 @@
       }
     },
     {
-      "name": "Caerula",
+      "name": "Thalas",
       "col": 2,
       "row": 9,
       "uwp": "A89A7BB-E",
       "tradeCodes": ["Ht", "Wa"],
-      "gasGiants": ["placeholder"],
+      "gasGiants": ["Merak (GS3)", "Deest (GS3)", "Ehecatl (GS3)"],
       "bases": ["Highport", "Army"],
       "description": [],
       "alert": "Amber",
       "moons": [],
-      "berthing": 0,
-      "weeklyTraffic": 0,
-      "diameter": 0,
-      "gravity": 0,
-      "orbitalPeriod": "",
-      "distanceFromStarAU": 0,
+      "berthing": 2000,
+      "weeklyTraffic": 140,
+      "diameter": 12703,
+      "gravity": 1,
+      "orbitalPeriod": "690D 13H",
+      "distanceFromStarAU": 1.6,
       "temperatures": {
-        "daytime": 0,
-        "nighttime": 0
+        "daytime": 26,
+        "nighttime": 19
       }
     },
     {
@@ -441,7 +471,7 @@
       "weeklyTraffic": 2,
       "berthing": 1500,
       "alert": "",
-      "moons": ["Laguda (2900 km)"],
+      "moons": ["Laguda (2950 km)"],
       "diameter": 5933,
       "orbitalPeriod": "541D 7H",
       "distanceFromStarAU": 1.36,
