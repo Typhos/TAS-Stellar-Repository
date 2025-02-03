@@ -64,12 +64,12 @@ const PlanetDetails: React.FC = () => {
             <li>
               <strong>Quality:</strong> {starportInfo?.quality}
             </li>
-            {portTypes && (
+            {!!portTypes && (
               <li>
                 <strong>Types:</strong> {portTypes}
               </li>
             )}
-            {planet.weeklyTraffic && (
+            {!!planet.weeklyTraffic && (
               <li>
                 <strong>Traffic:</strong> {planet.weeklyTraffic} starships/week
               </li>
@@ -87,7 +87,7 @@ const PlanetDetails: React.FC = () => {
               <strong>Fuel Available:</strong> {starportInfo?.refinedFuel ? "Refined (Cr500 / ton)" : ""}
               {starportInfo?.unrefinedFuel ? "Unrefined (Cr100 / ton)" : ""}
             </li>
-            {starportInfo?.refinedFuel && (
+            {!!starportInfo?.refinedFuel && (
               <li>
                 <strong>Max Refined Fuel Per Day:</strong> {starportInfo?.maxRefinedFuelPerDay}
               </li>
@@ -96,9 +96,32 @@ const PlanetDetails: React.FC = () => {
               <strong>Total Docking Space:</strong> {starportInfo?.dockingSpace}
             </li>
           </ul>
+
+          {/* Starport Bases*/}
+          {planet.bases.length > 0 && (
+            <>
+              <h3>System Base{planet.bases.length > 1 ? "s" : ""}</h3>
+              <ul>
+                {planet.bases?.map((base) => {
+                  switch (base) {
+                    case "Army":
+                      return <li>Imperial Army garrison</li>;
+                    case "Navy":
+                      return <li>Imperial Navy base</li>;
+                    case "Scout":
+                      return <li>Scout Services post</li>;
+                  }
+                })}
+              </ul>
+            </>
+          )}
+
+          {/* Gas Giants*/}
           {planet.gasGiants.length > 0 && (
             <>
-              <h3>Gas Giant{planet.gasGiants.length > 1 ? "s" : ""}</h3>
+              <h3>
+                Gas Giant{planet.gasGiants.length > 1 ? "s" : ""} ({planet.gasGiants.length})
+              </h3>
               <ul>
                 {planet.gasGiants?.map((planet) => {
                   return <li key={planet}>{planet}</li>;
@@ -145,22 +168,22 @@ const PlanetDetails: React.FC = () => {
           )}
           <h3>Metrics</h3>
           <ul>
-            {planet.diameter && (
+            {!!planet.diameter && (
               <li>
                 <strong>Diameter:</strong> {planet.diameter} km
               </li>
             )}
-            {planet.gravity && (
+            {!!planet.gravity && (
               <li>
                 <strong>Gravity:</strong> {planet.gravity} G
               </li>
             )}
-            {planet.orbitalPeriod && (
+            {!!planet.orbitalPeriod && (
               <li>
                 <strong>Orbital Period:</strong> {planet.orbitalPeriod}
               </li>
             )}
-            {planet.distanceFromStarAU && (
+            {!!planet.distanceFromStarAU && (
               <li>
                 <strong>Distance from Star:</strong> {planet.distanceFromStarAU} AU
               </li>
@@ -172,7 +195,7 @@ const PlanetDetails: React.FC = () => {
             )}
           </ul>
 
-          {planet.diameter && <JumpTimeTable diameterKm={planet.diameter} />}
+          {!!planet.diameter && <JumpTimeTable diameterKm={planet.diameter} />}
         </div>
       </div>
 

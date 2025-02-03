@@ -1,9 +1,10 @@
 import { Planet, SubSector } from "../models/stellarModels";
 
+import hegir from "./sub-sectors/hegirSubsector.json";
 import karvess from "./sub-sectors/karvessSubsector.json";
 import ulara from "./sub-sectors/ularaSubsector.json";
 
-const subsectors: SubSector[] = [ulara, karvess]; // List all subsectors here
+const subsectors: SubSector[] = [ulara, karvess, hegir]; // List all subsectors here
 
 /**
  * Merge all subsector data into a single JSON object.

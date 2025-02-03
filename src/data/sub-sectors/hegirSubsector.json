@@ -1,0 +1,28 @@
+{
+  "name": "Hegir",
+  "planets": [
+    {
+      "name": "Qin",
+      "col": 0,
+      "row": 11,
+      "uwp": "C52067A-9",
+      "tradeCodes": ["De", "Na", "Ni", "Po", "Fr"],
+      "gasGiants": ["Hadad (GLC)", "Telesphorus (GS3)"],
+      "bases": [],
+      "berthing": 600,
+      "weeklyTraffic": 6,
+      "alert": "Amber",
+      "moons": [],
+      "diameter": 0,
+      "gravity": 0,
+      "orbitalPeriod": "",
+      "distanceFromStarAU": 0,
+      "temperatures": {
+        "daytime": 0,
+        "nighttime": 0
+      },
+      "description": [""],
+      "adventureHooks": [""]
+    }
+  ]
+}

@@ -33,6 +33,7 @@ const SectorMap: React.FC = () => {
   return (
     <div className="sector-map-container">
       <svg className="sector-map" viewBox="-60 -80 1500 1150" preserveAspectRatio="xMidYMid meet">
+        {/* <svg className="sector-map" viewBox="-60 -80 1500 2200" preserveAspectRatio="xMidYMid meet"> */}
         {/* Render the xBoat routes as lines */}
         {xBoatRoutes.map((route: xBoatRoute, index: number) => {
           const startCoords = getHexCoords(route.start.col, route.start.row);
@@ -143,6 +144,57 @@ const SectorMap: React.FC = () => {
                         height="15"
                         onClick={() => navigate(`/planet/${encodeURIComponent(planet.name.toLowerCase())}`)}
                       />
+                    )}
+
+                    {/* Base Icons */}
+                    {planet.bases && (
+                      <g>
+                        {/* {planet.bases.includes("Highport") && (
+                          <image
+                            href={highportIcon}
+                            x={x - HEX_SIZE / 2.3}
+                            y={y - 35}
+                            width="12"
+                            height="12"
+                            onClick={() => navigate(`/planet/${encodeURIComponent(planet.name.toLowerCase())}`)}
+                          />
+                        )} */}
+
+                        {planet.bases.includes("Navy") && (
+                          <text
+                            x={x - HEX_SIZE / 2.2}
+                            y={y - 24}
+                            fontSize="14"
+                            fill="white"
+                            onClick={() => navigate(`/planet/${encodeURIComponent(planet.name.toLowerCase())}`)}
+                          >
+                            ★
+                          </text>
+                        )}
+
+                        {planet.bases.includes("Army") && (
+                          <rect
+                            x={x - HEX_SIZE / 1.8}
+                            y={y - 18}
+                            width="8"
+                            height="8"
+                            fill="white"
+                            onClick={() => navigate(`/planet/${encodeURIComponent(planet.name.toLowerCase())}`)}
+                          />
+                        )}
+
+                        {planet.bases.includes("Scout") && (
+                          <text
+                            x={x - HEX_SIZE / 1.65}
+                            y={y + 7}
+                            fontSize="11"
+                            fill="white"
+                            onClick={() => navigate(`/planet/${encodeURIComponent(planet.name.toLowerCase())}`)}
+                          >
+                            ▲
+                          </text>
+                        )}
+                      </g>
                     )}
 
                     {/* Clickable Hex Interaction */}
