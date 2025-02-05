@@ -65,7 +65,7 @@ const PlanetDetails: React.FC = () => {
 
       <section
         className="planet-details__description"
-        dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(planet.description) }}
+        dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(planet.introduction) }}
       />
 
       <aside className="planet-details__sidebar">
@@ -84,26 +84,30 @@ const PlanetDetails: React.FC = () => {
                 {starportInfo?.quality} ({starportInfo?.class})
               </td>
             </tr>
-            <tr>
-              <th>Berthing Fee</th>
-              <td>{getBerthingFees(planet.berthing, planet.uwp)} per week</td>
-            </tr>
-            <tr>
-              <th>Traffic</th>
-              <td>{planet.weeklyTraffic || "N/A"} ships per week</td>
-            </tr>
-            <tr>
-              <th>Shipyard</th>
-              <td>{starportInfo?.shipyard}</td>
-            </tr>
-            <tr>
-              <th>Repair Capabilities</th>
-              <td>{starportInfo?.repair}</td>
-            </tr>
-            <tr>
-              <th>Fuel</th>
-              <td>{starportInfo?.refinedFuel ? "Refined" : "Unrefined"}</td>
-            </tr>
+            {starportInfo?.class !== "X" && (
+              <>
+                <tr>
+                  <th>Berthing Fee</th>
+                  <td>{planet.berthing ? `${getBerthingFees(planet.berthing, planet.uwp)} per week` : "unknown"}</td>
+                </tr>
+                <tr>
+                  <th>Traffic</th>
+                  <td>{planet.weeklyTraffic ? `${planet.weeklyTraffic} ships per week` : "unknown"}</td>
+                </tr>
+                <tr>
+                  <th>Shipyard</th>
+                  <td>{starportInfo?.shipyard}</td>
+                </tr>
+                <tr>
+                  <th>Repair Capabilities</th>
+                  <td>{starportInfo?.repair}</td>
+                </tr>
+                <tr>
+                  <th>Fuel</th>
+                  <td>{starportInfo?.refinedFuel ? "Refined" : "Unrefined"}</td>
+                </tr>
+              </>
+            )}
           </tbody>
         </table>
 
@@ -254,8 +258,8 @@ const PlanetDetails: React.FC = () => {
 
       {mapExists && (
         <figure className="planet-details__map">
-          <figcaption>Surface Map of {planet.name}</figcaption>
           <img src={mapSrc} alt={`${planet.name} Map`} />
+          <figcaption>Surface Map of {planet.name}</figcaption>
         </figure>
       )}
 
