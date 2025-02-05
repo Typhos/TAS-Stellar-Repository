@@ -58,8 +58,8 @@ const PlanetDetails: React.FC = () => {
 
       {planet.alert && (
         <section className={`planet-details__alert-status ${planet.alert === "Amber" ? "amber" : "red"}`}>
-          <span className="advisory">TAS System Advisory:</span>{" "}
-          <span className={planet.alert === "Amber" ? "amber" : "red"}>Code {planet.alert}</span>
+          {/* <span className="advisory"></span>{" "} */}
+          <span className={planet.alert === "Amber" ? "amber" : "red"}>Travel Code {planet.alert}</span>
         </section>
       )}
 
