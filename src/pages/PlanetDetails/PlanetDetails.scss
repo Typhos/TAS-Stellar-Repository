@@ -1,152 +1,274 @@
 @use "../../styles/mixins" as *;
 
 .planet-details {
-  font-size: 14px;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 300px 1fr;
+  grid-auto-rows: auto;
+  align-items: start;
 
-  &__header {
-    padding: 2rem 0 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    width: $max-page-width;
+  width: 100%;
+  padding: 1rem;
+  text-align: left;
 
-    @include respond-to(mobile) {
-      padding: 0 0.6rem; // Less padding on smaller screens
-      width: 100%;
-      // max-width: calc(100vw - 1.2rem);
-
-      flex-direction: column;
-      align-items: center;
-      margin-top: 1rem;
-    }
+  > * {
+    grid-column: 2 / 3;
   }
 
-  &__name {
-    color: $primary;
-    font-style: italic;
-    font-size: 2.66rem;
-    line-height: 0.5em;
-
-    @include respond-to(mobile) {
-      font-size: 2rem;
-    }
+  h3 {
+    margin-top: 1em;
+    padding-bottom: 0.25rem;
   }
 
-  &__map {
-    display: flex;
-    width: 100%;
-    margin: 0 auto;
+  &__sidebar {
+    margin-top: 1.5rem;
+    top: 2.5rem;
 
-    &--heading {
-      margin-bottom: 2rem;
-    }
-  }
+    position: sticky;
+    align-self: flex-start;
+    height: fit-content;
+    font-size: 0.9rem;
+    grid-column: 1;
+    grid-row: 1 / span 20;
 
-  &__description {
-    columns: 2;
-    column-gap: 2rem;
+    padding: 1rem;
 
-    @include respond-to(mobile) {
-      columns: unset;
-    }
+    border: 1px solid $primary;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-    h3 {
-      margin: 2em 0 0.5em;
-    }
+    width: 250px;
 
-    p {
-      margin: 1em 0 1em;
+    h2 {
+      text-align: center;
+      letter-spacing: 0.1em;
     }
 
     ul {
-      list-style-type: disc;
+      padding-left: 0;
     }
 
-    &--section {
-      /* The modern, standard property: */
-      break-inside: avoid-column;
+    .tableTitle {
+      font-size: 1.25rem;
+      background-color: $black;
+      padding-bottom: 0.5em;
+    }
 
-      /* Browser-prefixed versions for wider support: */
-      -webkit-column-break-inside: avoid;
-      -moz-column-break-inside: avoid;
+    .starport-table {
+      text-align: left;
+      border: 0;
+      border-collapse: collapse;
 
-      /* Also often used for pagination: */
-      page-break-inside: avoid;
+      tr {
+        &:nth-child(odd) {
+          background: $row-alt;
+        }
+      }
+
+      th,
+      td {
+        vertical-align: top;
+        border: 0;
+      }
     }
   }
 
-  &__columns {
+  &__header {
     display: flex;
-    gap: 3rem;
-    align-items: stretch; // Ensures equal height
+    flex-direction: row;
     justify-content: space-between;
-    width: 100%;
-    margin: 3rem 0;
+    padding: 0.66rem 0 0;
 
-    @include respond-to(mobile) {
-      // width: 80%;
-      padding: 0;
-      justify-content: center;
+    h1 {
+      margin: 0;
+      font-size: 3rem;
+    }
+
+    &--uwp {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-evenly;
+      font-size: 1.2rem;
+
+      .uwp-code {
+        letter-spacing: 3px;
+        margin-right: 1em;
+      }
     }
   }
 
-  &__economic,
+  &__alert-status {
+    color: $black;
+    padding: 0.5em;
+    margin: 1rem 0 0.5rem;
+    border-radius: 0.5rem;
+
+    // border: 1px;
+    // border-style: solid;
+
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
+
+    &.amber {
+      border-color: $amber;
+      background-color: $amber;
+    }
+
+    &.red {
+      border-color: $red;
+      background-color: $red;
+    }
+
+    .amber,
+    .red {
+      font-style: italic;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+
+    .amber {
+      // color: $amber;
+    }
+
+    .red {
+      // color: $red;
+    }
+  }
+
+  &__overview {
+    padding: 1rem 0;
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(4, calc(25% - 0.66rem));
+      grid-template-rows: repeat(3, auto);
+      gap: 0.75rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      &__item {
+        padding: 0.33rem 1rem;
+        border: 2px solid rgba($white, 0.3);
+        border-radius: 0.5rem;
+        display: flex;
+        flex-direction: column;
+      }
+
+      &__title {
+        font-weight: bold;
+        margin-bottom: 0rem;
+        font-size: 1rem;
+        color: $secondary;
+      }
+
+      &__value {
+        font-size: 0.9rem;
+        line-height: 1.4;
+      }
+    }
+  }
+
+  &__tradeCodes {
+    margin-bottom: 3rem;
+  }
+
   &__metrics {
-    flex: 1;
-    padding: 0rem 1rem 2rem;
-    border: 1px solid #d3d3d3;
-    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__map {
+    text-align: center;
+    margin: 3rem;
+
+    img {
+      max-width: 100%;
+    }
+
+    figcaption {
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      color: $secondary;
+      font-style: italic;
+    }
+  }
+
+  &__description,
+  &__articles {
+    strong {
+      color: $secondary;
+    }
+  }
+
+  &__articles {
+    padding: 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 3rem;
+
+    h2 {
+      margin: 2em 0 0.66em;
+    }
+
+    &-section {
+      margin-bottom: 1rem;
+
+      p,
+      ul,
+      ol {
+        margin: 0.5rem 0;
+        line-height: 1.6;
+      }
+
+      ul,
+      ol {
+        padding-left: 1.5rem;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
-    width: auto;
-  }
+    width: 90%;
+    grid-template-columns: 1fr;
 
-  .bottom-border {
-    border-bottom: 2px solid $primary;
-    display: flex;
-    width: 100%;
-  }
-
-  ol {
-    list-style: decimal-leading-zero;
-    margin-left: 2em;
-  }
-
-  strong {
-    color: $secondary;
-  }
-
-  // Make sure layout adjusts well on smaller screens
-  @media (max-width: 900px) {
     &__header {
-      width: 80%;
+      flex-direction: column;
 
-      &.bottom-border {
-        // border: 0;
+      &--uwp {
+        justify-content: flex-start;
       }
     }
 
-    &__columns {
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      gap: 1.5rem;
-      margin-top: 1.5rem;
+    &__sidebar {
+      position: static;
+      width: 90%;
+      margin-bottom: 1rem;
     }
 
-    &__economic,
+    &__content {
+    }
+
+    &__overview {
+      .overview-grid {
+        display: grid;
+        grid-template-columns: repeat(2, calc(50% - 0.66rem));
+        grid-template-rows: repeat(3, auto);
+      }
+    }
+
     &__metrics {
-      width: 90%; // Full width on small screens
+      flex-direction: column;
     }
 
     &__map {
-      width: 100%; // Allow map to scale for mobile
-    }
-
-    .bottom-border {
-      max-width: 100vw;
+      width: 95%;
       padding: 0;
+      margin: 3rem auto;
     }
   }
 }

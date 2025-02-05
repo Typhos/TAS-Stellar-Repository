@@ -2,21 +2,24 @@ $page-width: 90%;
 $max-page-width: 1080px;
 
 $bg-color: #121212;
-$primary: #27dfff;
-$primary-alt: #1da5bd;
-$secondary: #8389ff;
-$secondary-alt: #4958ff;
+$primary: #29ceeb;
+$primary-alt: #55ceeb;
+$secondary: #88a3e8;
+$secondary-alt: #5563ff;
+
+$amber: #e7b40a;
+$red: #e70808;
 
 $border-color: #444;
 $text-color: #ddd;
 $header-color: #bbb;
-$row-alt: #101010;
+$row-alt: #191919;
 $input-bg: #222;
 
 $link-color: #ff7700;
 
-$white: #ffffff;
-$black: #000000;
+$white: #eaecf0;
+$black: #101418;
 
 @mixin respond-to($breakpoint) {
   @if $breakpoint == mobile {

@@ -11,7 +11,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #000;
+  background-color: $black;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -82,20 +82,44 @@ h1 {
 }
 
 h2 {
-  font-size: 1.33rem;
-  color: $primary;
+  font-size: 1.5rem;
   font-weight: 700;
-  text-transform: uppercase;
   padding: 0;
   margin: 1em 0;
+  border-bottom: 1px solid $white;
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: 0.75em 0 0.5em;
   font-style: italic;
   font-weight: 500;
-  color: $secondary-alt;
+  color: $white;
+}
+
+h4 {
+  font-size: 1rem;
+  margin: 0.66em 0 0.33em;
+  font-weight: 500;
+  color: $secondary;
+}
+
+table {
+  th,
+  td {
+    padding: 0.75em;
+  }
+
+  .tableTitle {
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    color: $primary;
+    font-style: italic;
+    font-weight: 700;
+    border-bottom: 0;
+    padding: 0.33rem;
+    text-align: center;
+  }
 }
 
 .header {
@@ -139,13 +163,9 @@ h3 {
 
 ul,
 ol {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  padding-inline-start: 1rem;
+  padding-inline-start: 2rem;
 
   li {
-    padding: 0;
     margin-bottom: 0.33rem;
 
     strong {

@@ -18,6 +18,8 @@ $font-size: 1.8rem;
   font-size: $font-size;
   line-height: calc($font-size / 2);
   text-align: center;
+  font-size: 1.2rem;
+  max-width: 300px;
 
   @include respond-to(mobile) {
     margin-bottom: 2rem;
@@ -35,46 +37,46 @@ $font-size: 1.8rem;
   &__tradeCodes {
     padding: 0 $font-size;
   }
-}
 
-.uwp-cell {
-  border: 1px solid white;
-  width: $cell-size;
-  height: $cell-size;
-  font-weight: bold;
-  background: black;
-  color: white;
-
-  @include respond-to(mobile) {
-    $mobile-cell-size: calc($cell-size / 1.3);
-
-    font-size: calc($font-size / 1.5);
-    width: $mobile-cell-size;
-    height: $mobile-cell-size;
-  }
-
-  &.trade-codes {
-    padding: 0 calc($font-size / 2);
-    width: auto;
-    border-color: black;
-    font-size: calc($font-size / 1.3);
+  .uwp-cell {
+    border: 1px solid white;
+    width: $cell-size;
+    height: $cell-size;
+    font-weight: bold;
+    background: black;
+    color: white;
+    padding: 0.025em;
 
     @include respond-to(mobile) {
-      display: none;
+      $mobile-cell-size: calc($cell-size / 1.3);
+
+      font-size: calc($font-size / 1.5);
+      width: $mobile-cell-size;
+      height: $mobile-cell-size;
+    }
+
+    &.trade-codes {
+      padding: 0 calc($font-size / 2);
+      width: auto;
+      border-color: black;
+
+      @include respond-to(mobile) {
+        display: none;
+      }
     }
   }
-}
 
-.uwp-dash {
-  width: calc($cell-size / 1.5);
-  height: calc($cell-size / 1.5);
-  font-weight: bold;
-  background: black;
-  color: white;
+  .uwp-dash {
+    width: calc($cell-size / 1.5);
+    height: calc($cell-size / 1.5);
+    font-weight: bold;
+    background: black;
+    color: white;
 
-  &.tradeCodes--dash {
-    @include respond-to(mobile) {
-      display: none;
+    &.tradeCodes--dash {
+      @include respond-to(mobile) {
+        display: none;
+      }
     }
   }
 }

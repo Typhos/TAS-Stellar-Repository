@@ -1,5 +1,14 @@
 import "./PlanetDetails.scss";
 
+import {
+  AtmosphereData,
+  GovernmentData,
+  HydrographicsData,
+  LawLevelData,
+  PopulationData,
+  SizeData,
+  TechLevelData,
+} from "../../models/uwpModel";
 import { Planet, TradeCodeDescriptions } from "../../models/stellarModels";
 import React, { useEffect, useState } from "react";
 
@@ -11,29 +20,24 @@ import { getStarportInfo } from "../../models/starportModel";
 import { useParams } from "react-router-dom";
 
 const PlanetDetails: React.FC = () => {
-  // Extract the planet name from the URL
   const { planetName } = useParams<{ planetName: string }>();
   const [mapExists, setMapExists] = useState(false);
 
-  // Get all planets and create a lookup table
   const planets = compileSectorData();
   const planetLookup = new Map<string, Planet>();
 
   planets.forEach((planet) => {
-    planetLookup.set(planet.name.toLowerCase(), planet); // Use lowercase for case-insensitive matching
+    planetLookup.set(planet.name.toLowerCase(), planet);
   });
 
-  // Retrieve the planet's data using the name from the URL
   const planet = planetName ? planetLookup.get(planetName.toLowerCase()) : null;
-  const starportInfo = getStarportInfo(planet.uwp);
-  const portTypes = getPortTypes(planet);
+  const starportInfo = getStarportInfo(planet?.uwp);
 
-  // Handle the case where the planet is not found
   if (!planet) {
     return <div>Planet not found</div>;
   }
 
-  const mapFileName = `${planet?.name}-${planet.uwp}.png`;
+  const mapFileName = `${planet.name}-${planet.uwp}.png`;
   const mapSrc = `${import.meta.env.BASE_URL}images/planetMaps/${mapFileName}`;
 
   useEffect(() => {
@@ -45,187 +49,233 @@ const PlanetDetails: React.FC = () => {
 
   return (
     <div className="planet-details">
-      <div className="planet-details__header bottom-border">
-        <h2 className="planet-details__name">{planet.name}</h2>
-        <div className="uwp-container">
-          <UWPTable uwp={planet.uwp} tradeCodes={planet.tradeCodes} />
-        </div>
-      </div>
+      <header className="planet-details__header">
+        <h1>{planet.name}</h1>
+        <p className="planet-details__header--uwp">
+          <span className="uwp-code">{planet.uwp}</span> {planet.tradeCodes?.join(" ")}
+        </p>
+      </header>
 
-      <div className="planet-details__columns">
-        {/* Economic Data */}
-        <div className="planet-details__economic">
-          <h2 className="">Economic Information</h2>
-          <h3>Starport</h3>
-          <ul>
-            <li>
-              <strong>Class:</strong> {starportInfo?.class}
-            </li>
-            <li>
-              <strong>Quality:</strong> {starportInfo?.quality}
-            </li>
-            {!!portTypes && (
-              <li>
-                <strong>Types:</strong> {portTypes}
-              </li>
-            )}
-            {!!planet.weeklyTraffic && (
-              <li>
-                <strong>Traffic:</strong> {planet.weeklyTraffic} starships/week
-              </li>
-            )}
-            <li>
-              <strong>Berthing Fees (weekly):</strong> {getBerthingFees(planet.berthing, planet.uwp)}
-            </li>
-            <li>
-              <strong>Shipyard:</strong> {starportInfo?.shipyard}
-            </li>
-            <li>
-              <strong>Repair Capabilities:</strong> {starportInfo?.repair}
-            </li>
-            <li>
-              <strong>Fuel Available:</strong> {starportInfo?.refinedFuel ? "Refined (Cr500 / ton)" : ""}
-              {starportInfo?.unrefinedFuel ? "Unrefined (Cr100 / ton)" : ""}
-            </li>
-            {!!starportInfo?.refinedFuel && (
-              <li>
-                <strong>Max Refined Fuel Per Day:</strong> {starportInfo?.maxRefinedFuelPerDay}
-              </li>
-            )}
-            <li>
-              <strong>Total Docking Space:</strong> {starportInfo?.dockingSpace}
-            </li>
-          </ul>
+      {planet.alert && (
+        <section className={`planet-details__alert-status ${planet.alert === "Amber" ? "amber" : "red"}`}>
+          <span className="advisory">TAS System Advisory:</span>{" "}
+          <span className={planet.alert === "Amber" ? "amber" : "red"}>Code {planet.alert}</span>
+        </section>
+      )}
 
-          {/* Starport Bases*/}
-          {planet.bases.length > 0 && (
-            <>
-              <h3>System Base{planet.bases.length > 1 ? "s" : ""}</h3>
-              <ul>
-                {planet.bases?.map((base) => {
-                  switch (base) {
-                    case "Army":
-                      return <li>Imperial Army garrison</li>;
-                    case "Navy":
-                      return <li>Imperial Navy base</li>;
-                    case "Scout":
-                      return <li>Scout Services post</li>;
-                  }
-                })}
-              </ul>
-            </>
-          )}
+      <section
+        className="planet-details__description"
+        dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(planet.description) }}
+      />
 
-          {/* Gas Giants*/}
-          {planet.gasGiants.length > 0 && (
-            <>
-              <h3>
-                Gas Giant{planet.gasGiants.length > 1 ? "s" : ""} ({planet.gasGiants.length})
-              </h3>
-              <ul>
-                {planet.gasGiants?.map((planet) => {
-                  return <li key={planet}>{planet}</li>;
-                })}
-              </ul>
-            </>
-          )}
-          <h3>Trade Classifications and Remarks</h3>
-          <ul>
-            {planet.tradeCodes?.map((code) => {
-              const tradeInfo = TradeCodeDescriptions[code];
-              return (
-                <li key={code}>
-                  <strong>{tradeInfo.name}</strong>: {tradeInfo.description}
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+      <aside className="planet-details__sidebar">
+        <table className="starport-table">
+          <thead>
+            <tr>
+              <th className="tableTitle" colSpan={2}>
+                Starport Overview
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Class</th>
+              <td>
+                {starportInfo?.quality} ({starportInfo?.class})
+              </td>
+            </tr>
+            <tr>
+              <th>Berthing Fee</th>
+              <td>{getBerthingFees(planet.berthing, planet.uwp)} per week</td>
+            </tr>
+            <tr>
+              <th>Traffic</th>
+              <td>{planet.weeklyTraffic || "N/A"} ships per week</td>
+            </tr>
+            <tr>
+              <th>Shipyard</th>
+              <td>{starportInfo?.shipyard}</td>
+            </tr>
+            <tr>
+              <th>Repair Capabilities</th>
+              <td>{starportInfo?.repair}</td>
+            </tr>
+            <tr>
+              <th>Fuel</th>
+              <td>{starportInfo?.refinedFuel ? "Refined" : "Unrefined"}</td>
+            </tr>
+          </tbody>
+        </table>
 
-        {/* Planetary Metrics */}
-        <div className="planet-details__metrics">
-          <h2 className="">Planetary Details</h2>
-          {planet.rings?.length > 0 && (
-            <p>
-              <strong>Planetary Ring{planet.rings?.length > 1 ? "s" : ""}:</strong> {planet.rings.join(", ")}
+        <JumpTimeTable diameterKm={planet.diameter} />
+      </aside>
+
+      <section className="planet-details__overview">
+        <h2>World Profile</h2>
+        <ul className="overview-grid">
+          <li className="overview-grid__item">
+            <h4 className="overview-grid__title">Starport Class</h4>
+            <p className="overview-grid__value">
+              {starportInfo?.quality} ({starportInfo?.class})
             </p>
-          )}
-          {planet.moons?.length > 0 && (
-            <>
-              <h3>Moon{planet.moons?.length > 1 ? "s" : ""}</h3>
-              <ol>
-                {planet.moons?.map((moon) => {
-                  return <li key={moon}>{moon}</li>;
-                })}
-              </ol>
-            </>
-          )}
-          {planet.moons?.length === 0 && (
-            <>
-              <h3>Moons</h3>
-              <p>No significant satellites</p>
-            </>
-          )}
-          <h3>Metrics</h3>
-          <ul>
-            {!!planet.diameter && (
-              <li>
-                <strong>Diameter:</strong> {planet.diameter} km
-              </li>
-            )}
-            {!!planet.gravity && (
-              <li>
-                <strong>Gravity:</strong> {planet.gravity} G
-              </li>
-            )}
-            {!!planet.orbitalPeriod && (
-              <li>
-                <strong>Orbital Period:</strong> {planet.orbitalPeriod}
-              </li>
-            )}
-            {!!planet.distanceFromStarAU && (
-              <li>
-                <strong>Distance from Star:</strong> {planet.distanceFromStarAU} AU
-              </li>
-            )}
-            {planet.temperatures && (
-              <li>
-                <strong>Day/Night Temps:</strong> {planet.temperatures.daytime}°C / {planet.temperatures.nighttime}°C
-              </li>
-            )}
-          </ul>
+          </li>
+          <li className="overview-grid__item">
+            <h4 className="overview-grid__title">Size</h4>
+            <p className="overview-grid__value">
+              {planet.diameter.toString()?.concat(" km") || SizeData[planet.uwp[1]]?.diameter || "Unknown"} (
+              {planet.gravity ? planet.gravity + " G" : SizeData[planet.uwp[1]]?.gravity})
+            </p>
+          </li>
+          <li className="overview-grid__item">
+            <h4 className="overview-grid__title">Atmosphere</h4>
+            <p className="overview-grid__value">{AtmosphereData[planet.uwp[2]]?.description || "Unknown"}</p>
+          </li>
+          <li className="overview-grid__item">
+            <h4 className="overview-grid__title">Hydrographics</h4>
+            <p className="overview-grid__value">
+              ~{HydrographicsData[planet.uwp[3]]?.percentage} of surface area
+              {(planet.uwp[2] === "B" || planet.uwp[2] === "C") && <i> (Non-water surface liquids)</i>}
+            </p>
+          </li>
+          <li className="overview-grid__item">
+            <h4 className="overview-grid__title">Population</h4>
+            <p className="overview-grid__value">{PopulationData[planet.uwp[4]]?.populationRange || "Unknown"}</p>
+          </li>
+          <li className="overview-grid__item">
+            <h4 className="overview-grid__title">Government</h4>
+            <p className="overview-grid__value">{GovernmentData[planet.uwp[5]]?.description || "Unknown"}</p>
+          </li>
+          <li className="overview-grid__item">
+            <h4 className="overview-grid__title">Law Level</h4>
+            <p className="overview-grid__value">{LawLevelData[planet.uwp[6]]?.restrictions || "Unknown"}</p>
+          </li>
+          <li className="overview-grid__item">
+            <h4 className="overview-grid__title">Tech Level</h4>
+            <p className="overview-grid__value">
+              {TechLevelData[planet.uwp[8]]?.type} - {TechLevelData[planet.uwp[8]]?.era || "Unknown"}
+            </p>
+          </li>
+          <li className="overview-grid__item">
+            <h4 className="overview-grid__title">Orbit Distance</h4>
+            <p className="overview-grid__value">{planet.distanceFromStarAU} AU</p>
+          </li>
+          <li className="overview-grid__item">
+            <h4 className="overview-grid__title">Orbital Period</h4>
+            <p className="overview-grid__value">{planet.orbitalPeriod}</p>
+          </li>
+          <li className="overview-grid__item">
+            <h4 className="overview-grid__title">Daytime Temp</h4>
+            <p className="overview-grid__value">{planet.temperatures.daytime}°C</p>
+          </li>
+          <li className="overview-grid__item">
+            <h4 className="overview-grid__title">Nighttime Temp</h4>
+            <p className="overview-grid__value">{planet.temperatures.nighttime}°C</p>
+          </li>
+        </ul>
+      </section>
 
-          {!!planet.diameter && <JumpTimeTable diameterKm={planet.diameter} />}
-        </div>
+      <section className="planet-details__tradeCodes">
+        <h3>Trade Classifications and Remarks</h3>
+        <ul>
+          {planet.tradeCodes?.map((code) => {
+            const tradeInfo = TradeCodeDescriptions[code];
+            return (
+              <li key={code}>
+                <strong>{tradeInfo.name}</strong>: {tradeInfo.description}
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+
+      <h2>Planetary & System Details</h2>
+      <div className="planet-details__metrics">
+        {planet.bases.length > 0 && (
+          <div>
+            <h3 className="no-underline">System Base{planet.bases.length > 1 ? "s" : ""}</h3>
+            <ul>
+              {planet.bases?.map((base) => {
+                switch (base) {
+                  case "Army":
+                    return <li>Imperial Army garrison</li>;
+                  case "Navy":
+                    return <li>Imperial Navy base</li>;
+                  case "Scout":
+                    return <li>Scout Services outpost</li>;
+                  case "Pirate":
+                    return <li>Pirate stronghold</li>;
+                }
+              })}
+            </ul>
+          </div>
+        )}
+
+        {/* RINGS */}
+        {planet.rings?.length > 0 && (
+          <p>
+            <strong>Planetary Ring{planet.rings?.length > 1 ? "s" : ""}:</strong> {planet.rings.join(", ")}
+          </p>
+        )}
+
+        {/* MOONS */}
+        {planet.moons?.length > 0 && (
+          <div>
+            <h3>Moon{planet.moons?.length > 1 ? "s" : ""}</h3>
+            <ol>
+              {planet.moons?.map((moon) => {
+                return <li key={moon}>{moon}</li>;
+              })}
+            </ol>
+          </div>
+        )}
+        {planet.moons?.length === 0 && (
+          <div>
+            <h3>Moons</h3>
+            <ul>
+              <li>No significant satellites</li>
+            </ul>
+          </div>
+        )}
+
+        {/* GAS GIANTS */}
+        {planet.gasGiants.length > 0 && (
+          <div>
+            <h3 className="no-underline">
+              Gas Giant{planet.gasGiants.length > 1 ? "s" : ""} ({planet.gasGiants.length})
+            </h3>
+            <ul>
+              {planet.gasGiants?.map((planet) => {
+                return <li key={planet}>{planet}</li>;
+              })}
+            </ul>
+          </div>
+        )}
       </div>
 
       {mapExists && (
-        <>
-          <h2 className="planet-details__map--heading  bottom-border">Surface Map</h2>
-          <img className="planet-details__map" src={mapSrc} alt={`${planet.name} Map`} />
-        </>
+        <figure className="planet-details__map">
+          <figcaption>Surface Map of {planet.name}</figcaption>
+          <img src={mapSrc} alt={`${planet.name} Map`} />
+        </figure>
       )}
 
-      {planet.description.length > 0 && (
-        <>
-          <h2 className=" bottom-border">Planetary Description</h2>
-          <div className="planet-details__description">
-            {planet.description.map((section) => {
-              return (
-                <section
-                  className="planet-details__description--section"
-                  dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(section) }}
-                />
-              );
-            })}
-          </div>
-        </>
+      {planet.details.length > 0 && (
+        <section className="planet-details__description">
+          {planet.details.map((section, index) => (
+            <article
+              key={index}
+              className="planet-details__description-section"
+              dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(section) }}
+            />
+          ))}
+        </section>
       )}
     </div>
   );
 };
 
 const getPortTypes = (planet: Planet) => {
+  if (!planet) return null;
   if (planet.uwp[0] === "X") return null;
   if (planet.bases.includes("Highport")) return "Highport & Downport";
   return "Downport Only";

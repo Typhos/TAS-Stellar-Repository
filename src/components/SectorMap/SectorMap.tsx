@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 
 import asteroidFieldIcon from "/images/asteroidField.png";
 import { compileSectorData } from "../../data/dataLoader";
-import gasGiantIcon from "/images/gasGiant.png";
+import gasGiantIcon from "/images/icons/gasGiant.png";
 import { useNavigate } from "react-router-dom";
 import xBoatRoutes from "../../data/xBoatRoutes.json";
 

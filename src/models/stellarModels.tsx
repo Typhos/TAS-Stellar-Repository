@@ -19,7 +19,8 @@ export interface Planet {
   };
   orbitalPeriod: string;
   distanceFromStarAU: number;
-  description: string[];
+  description: string;
+  details: string[];
 }
 
 export interface SubSector {
