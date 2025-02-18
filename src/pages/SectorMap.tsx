@@ -17,7 +17,7 @@ const HomePage: React.FC = () => {
     <>
       {!isMobile && (
         <>
-          <h2 className="sectorName">Sector: Malcari Drift</h2>
+          <h3 className="sectorName">Sector: Malcari Drift</h3>
           <SectorMap />
         </>
       )}

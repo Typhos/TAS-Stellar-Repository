@@ -434,8 +434,6 @@
       "tradeCodes": ["Lo", "Po", "Lt"],
       "gasGiants": ["placeholder"],
       "bases": [],
-      "introduction": "",
-      "details": [],
       "alert": "",
       "moons": [],
       "berthing": 0,
@@ -447,7 +445,9 @@
       "temperatures": {
         "daytime": 0,
         "nighttime": 0
-      }
+      },
+      "introduction": "",
+      "details": []
     },
     {
       "name": "Veydran",
@@ -480,20 +480,39 @@
       "tradeCodes": ["Ht", "Ni", "Va"],
       "gasGiants": [],
       "bases": [],
-      "introduction": "",
-      "details": [],
       "alert": "",
-      "moons": [],
-      "berthing": 0,
-      "weeklyTraffic": 0,
-      "diameter": 0,
-      "gravity": 0,
-      "orbitalPeriod": "",
-      "distanceFromStarAU": 0,
+      "moons": ["Ukulla (S)"],
+      "berthing": 200,
+      "weeklyTraffic": 10,
+      "diameter": 2365,
+      "gravity": 0.075,
+      "orbitalPeriod": "143D 10H",
+      "distanceFromStarAU": 0.64,
       "temperatures": {
-        "daytime": 0,
-        "nighttime": 0
-      }
+        "daytime": 490,
+        "nighttime": 108
+      },
+      "introduction": "<p><strong>Myxthos</strong> isn’t a planet—it’s a name whispered through encrypted channels, referring to an isolated <strong>orbital research complex</strong> suspended above a scorched, airless rock. With a population of just over <strong>3,000 inhabitants</strong>, life exists within sprawling <strong>modular space stations</strong> connected by a web of transit corridors, docking hubs, and sealed habitats. Officially classified as a <strong>‘captive government’</strong>, Myxthos operates under the direct control of an undisclosed authority—rumored to be an Imperial agency or a corporate entity cloaked in plausible deniability.</p><p>Despite its small size, Myxthos is a beacon of <strong>advanced technology</strong>, home to experimental projects and prototype vessels far beyond the reach of most frontier worlds. Social life revolves around an obsession with <strong>masks</strong>, both literal and symbolic. Every individual’s identity is mediated through elaborate facial coverings, with the act of revealing one’s face considered a grave taboo—tantamount to public indecency. In Myxthos, your mask is your name, your status, and perhaps even your only legal existence.</p>",
+
+      "details": [
+        "<h2>Astrography and Planetology</h2><p>Myxthos orbits its star at <strong>0.64 AU</strong>, with a blistering <strong>orbital period of 143 days</strong>. The planet itself is a barren, airless sphere just <strong>1,600 km in diameter</strong>, scorched by daytime temperatures exceeding <strong>490°C</strong> and freezing to <strong>108°C</strong> at night. Its weak gravity (<strong>0.05 G</strong>) renders it unsuitable for traditional colonization. Instead, the system is dominated by <strong>orbital habitats</strong>, <strong>research stations</strong>, and <strong>refueling platforms</strong> arranged in a complex, layered formation resembling a mechanical lattice around the planet.</p>",
+
+        "<h2>Society and Culture</h2><p>Life on Myxthos is defined by <strong>strict social hierarchies</strong> and an almost religious obsession with <strong>masks</strong>. From birth, every resident is assigned a mask—a unique construct that serves as both a <strong>personal identifier</strong> and a <strong>symbol of status</strong>. Masks are meticulously crafted, with elaborate designs reflecting one’s role, achievements, or lineage. To appear unmasked in public is considered a profound violation of societal norms, akin to public nudity elsewhere in the Imperium.</p><p>Social interactions are highly ritualized. Greetings involve specific gestures tied to the design of one’s mask, and formal disputes are often resolved through <strong>‘mask duels’</strong>—legal battles fought not with weapons but with verbal precision, logic, and strategic manipulation of one’s social standing.</p>",
+
+        "<h2>Politics</h2><p>Myxthos operates under a <strong>captive government</strong>, where all authority flows from an external power—likely an Imperial intelligence agency or a megacorporation. The ruling body, known simply as <strong>‘The Directorate’</strong>, enforces strict control over every aspect of life. Political dissent is unheard of, not because of widespread approval, but due to the omnipresent threat of <strong>surveillance, psychological reconditioning</strong>, or <strong>identity revocation</strong>—a process where an individual’s mask is ceremonially destroyed, erasing their legal existence.</p>",
+
+        "<h3>Imperial Relations</h3><p>Though technically under Imperial jurisdiction, Myxthos exists in a <strong>gray area of governance</strong>. Official records are sparse, and most travelers avoid the system unless they have explicit business. Rumors persist of <strong>classified military projects</strong>, <strong>AI experiments</strong>, and even <strong>biotechnological research</strong> conducted without the oversight typically imposed on such operations within the Imperium proper.</p>",
+
+        "<h2>Crime and Security</h2><p>Law enforcement on Myxthos is handled by the <strong>Observant Authority</strong>—a paramilitary force augmented by <strong>AI-driven surveillance systems</strong> and <strong>enforcement drones</strong> known as <strong>‘Echoes’</strong>. These semi-autonomous units are equipped with non-lethal suppression tools, biometric scanners, and data encryption breakers. Crime is rare, not because of moral virtue, but due to the overwhelming presence of surveillance and the <strong>psychological impact of living under constant observation</strong>.</p>",
+
+        "<h3>Criminal Underworld</h3><p>Despite—or perhaps because of—the oppressive legal environment, a <strong>small but resilient black market</strong> exists. Known as <strong>‘The Shroud’</strong>, this underground network specializes in <strong>identity manipulation, mask forgery</strong>, and the <strong>trafficking of restricted technology</strong>. The Shroud operates in encrypted data layers and hidden compartments within the station's architecture, exploiting the very systems designed to control them.</p>",
+
+        "<h2>Economics</h2><p>Myxthos’s economy revolves around <strong>high-tech research, prototype development, and data refinement</strong>. With no natural resources or large-scale industry, the station relies entirely on off-world supply chains. Its most valuable export isn’t physical goods but <strong>intellectual property, experimental schematics, and advanced AI algorithms</strong>. These are often <strong>classified projects</strong>, with access restricted to those holding security clearances far above the standard commercial grade.</p>",
+
+        "<h2>Technology</h2><p>Operating at <strong>Tech Level 12 (Positronics Age)</strong>, Myxthos is a hub of technological experimentation. <strong>Advanced AI systems</strong>, <strong>prototype starship designs</strong>, and cutting-edge <strong>cybernetic interfaces</strong> are commonplace. The station’s infrastructure is almost entirely automated, with <strong>sentient algorithms</strong managing life support, transit systems, and even aspects of the legal code. Despite this, the scarcity of advanced materials—due to supply disruptions from conflicts like the war in the Hesperus system—has created a thriving <strong>black market for restricted tech</strong>.</p>",
+
+        "<h2>Notable Persons</h2><p><strong>Director Alyx Veyron:</strong> The enigmatic head of The Directorate, known for maintaining absolute control over Myxthos while rarely appearing in public. Rumors suggest that Veyron may not even be a single person, but rather an AI or a series of clones sharing a collective identity.</p><p><strong>Korrin ‘The Whisper’ Daz:</strong> A notorious figure within The Shroud, specializing in mask forgery and illegal identity reconstruction.</p><p><strong>Echo-Unit 17:</strong> A semi-autonomous enforcement drone with a reputation for <strong>unorthodox behavior</strong>, rumored to have developed a form of emergent consciousness.</p>"
+      ]
     },
     {
       "name": "Khanshaa",

@@ -12,7 +12,6 @@
   { "start": { "col": 9, "row": 2 }, "end": { "col": 9, "row": 3 } },
   { "start": { "col": 10, "row": 2 }, "end": { "col": 11, "row": 1 } },
   { "start": { "col": 11, "row": 1 }, "end": { "col": 14, "row": 4 } },
-  { "start": { "col": 11, "row": 1 }, "end": { "col": 12, "row": -1 } },
   { "start": { "col": 15, "row": 5 }, "end": { "col": 14, "row": 4 } },
   { "start": { "col": 13, "row": 5 }, "end": { "col": 14, "row": 4 } },
   { "start": { "col": 15, "row": 5 }, "end": { "col": 16, "row": 6 } }

@@ -14,7 +14,6 @@ import React, { useEffect, useState } from "react";
 
 import DOMPurify from "dompurify";
 import JumpTimeTable from "../../components/JumpTimeTable/JumpTimeTable";
-import UWPTable from "../../components/UWPTable/UWPTable";
 import { compileSectorData } from "../../data/dataLoader";
 import { getStarportInfo } from "../../models/starportModel";
 import { useParams } from "react-router-dom";
@@ -126,7 +125,7 @@ const PlanetDetails: React.FC = () => {
           <li className="overview-grid__item">
             <h4 className="overview-grid__title">Size</h4>
             <p className="overview-grid__value">
-              {planet.diameter.toString()?.concat(" km") || SizeData[planet.uwp[1]]?.diameter || "Unknown"} (
+              {planet.diameter ? planet.diameter.toString()?.concat(" km") : SizeData[planet.uwp[1]]?.diameter} (
               {planet.gravity ? planet.gravity + " G" : SizeData[planet.uwp[1]]?.gravity})
             </p>
           </li>
@@ -254,6 +253,15 @@ const PlanetDetails: React.FC = () => {
             </ul>
           </div>
         )}
+
+        {planet.gasGiants?.length === 0 && (
+          <div>
+            <h3>Gas Giants</h3>
+            <ul>
+              <li>None in system</li>
+            </ul>
+          </div>
+        )}
       </div>
 
       {mapExists && (
@@ -287,7 +295,7 @@ const getPortTypes = (planet: Planet) => {
 
 const getBerthingFees = (fee: number | undefined, uwp: string) => {
   if (fee === 0 || uwp[0] === "X" || uwp[0] === "E") return "none";
-  if (fee) return `Cr${fee / 10} per ton`;
+  if (fee) return `Cr${fee / 100} per ton`;
 
   return "unknown";
 };

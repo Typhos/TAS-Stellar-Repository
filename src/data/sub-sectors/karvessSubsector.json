@@ -10,7 +10,20 @@
       "gasGiants": [],
       "bases": [],
       "description": "",
-      "alert": "Amber"
+      "alert": "Amber",
+      "moons": [],
+      "berthing": 0,
+      "weeklyTraffic": 0,
+      "diameter": 0,
+      "gravity": 0,
+      "orbitalPeriod": "",
+      "distanceFromStarAU": 0,
+      "temperatures": {
+        "daytime": 0,
+        "nighttime": 0
+      },
+      "introduction": "",
+      "details": []
     },
     {
       "name": "Ulveron",
@@ -22,7 +35,19 @@
       "bases": [],
       "description": "",
       "alert": "",
-      "moons": []
+      "moons": [],
+      "berthing": 0,
+      "weeklyTraffic": 0,
+      "diameter": 0,
+      "gravity": 0,
+      "orbitalPeriod": "",
+      "distanceFromStarAU": 0,
+      "temperatures": {
+        "daytime": 0,
+        "nighttime": 0
+      },
+      "introduction": "",
+      "details": []
     },
     {
       "name": "Korvask",
@@ -34,7 +59,19 @@
       "bases": [],
       "description": "",
       "alert": "",
-      "moons": []
+      "moons": [],
+      "berthing": 0,
+      "weeklyTraffic": 0,
+      "diameter": 0,
+      "gravity": 0,
+      "orbitalPeriod": "",
+      "distanceFromStarAU": 0,
+      "temperatures": {
+        "daytime": 0,
+        "nighttime": 0
+      },
+      "introduction": "",
+      "details": []
     },
     {
       "name": "Pyrost",
@@ -46,7 +83,19 @@
       "bases": ["Scout"],
       "description": "",
       "alert": "",
-      "moons": []
+      "moons": [],
+      "berthing": 0,
+      "weeklyTraffic": 0,
+      "diameter": 0,
+      "gravity": 0,
+      "orbitalPeriod": "",
+      "distanceFromStarAU": 0,
+      "temperatures": {
+        "daytime": 0,
+        "nighttime": 0
+      },
+      "introduction": "",
+      "details": []
     },
     {
       "name": "Trevalis",
@@ -57,7 +106,20 @@
       "gasGiants": ["placeholder"],
       "bases": ["Highport", "Navy"],
       "description": "",
-      "alert": "Amber"
+      "alert": "Amber",
+      "moons": [],
+      "berthing": 0,
+      "weeklyTraffic": 0,
+      "diameter": 0,
+      "gravity": 0,
+      "orbitalPeriod": "",
+      "distanceFromStarAU": 0,
+      "temperatures": {
+        "daytime": 0,
+        "nighttime": 0
+      },
+      "introduction": "",
+      "details": []
     },
     {
       "name": "Cybrak",
@@ -68,7 +130,20 @@
       "gasGiants": ["placeholder"],
       "bases": ["Highport"],
       "description": "",
-      "alert": "Amber"
+      "alert": "Amber",
+      "moons": [],
+      "berthing": 0,
+      "weeklyTraffic": 0,
+      "diameter": 0,
+      "gravity": 0,
+      "orbitalPeriod": "",
+      "distanceFromStarAU": 0,
+      "temperatures": {
+        "daytime": 0,
+        "nighttime": 0
+      },
+      "introduction": "",
+      "details": []
     },
     {
       "name": "Venomair",
@@ -79,7 +154,20 @@
       "gasGiants": ["placeholder"],
       "bases": ["Highport", "Navy", "Scout"],
       "description": "",
-      "alert": "Amber"
+      "alert": "Amber",
+      "moons": [],
+      "berthing": 0,
+      "weeklyTraffic": 0,
+      "diameter": 0,
+      "gravity": 0,
+      "orbitalPeriod": "",
+      "distanceFromStarAU": 0,
+      "temperatures": {
+        "daytime": 0,
+        "nighttime": 0
+      },
+      "introduction": "",
+      "details": []
     },
     {
       "name": "Cindral",
@@ -90,7 +178,20 @@
       "gasGiants": ["placeholder"],
       "bases": ["Highport", "Scout"],
       "description": "",
-      "alert": "Amber"
+      "alert": "Amber",
+      "moons": [],
+      "berthing": 0,
+      "weeklyTraffic": 0,
+      "diameter": 0,
+      "gravity": 0,
+      "orbitalPeriod": "",
+      "distanceFromStarAU": 0,
+      "temperatures": {
+        "daytime": 0,
+        "nighttime": 0
+      },
+      "introduction": "",
+      "details": []
     },
     {
       "name": "Lorveth",
@@ -100,9 +201,20 @@
       "tradeCodes": ["De", "Lt", "Ni", "Po"],
       "gasGiants": ["placeholder"],
       "bases": [],
-      "description": "",
       "alert": "",
-      "moons": []
+      "moons": [],
+      "berthing": 0,
+      "weeklyTraffic": 0,
+      "diameter": 0,
+      "gravity": 0,
+      "orbitalPeriod": "",
+      "distanceFromStarAU": 0,
+      "temperatures": {
+        "daytime": 0,
+        "nighttime": 0
+      },
+      "introduction": "",
+      "details": []
     },
     {
       "name": "Borynth",
@@ -112,9 +224,20 @@
       "tradeCodes": ["Ni", "Co"],
       "gasGiants": ["placeholder"],
       "bases": ["Navy"],
-      "description": "",
       "alert": "",
-      "moons": []
+      "moons": [],
+      "berthing": 0,
+      "weeklyTraffic": 0,
+      "diameter": 0,
+      "gravity": 0,
+      "orbitalPeriod": "",
+      "distanceFromStarAU": 0,
+      "temperatures": {
+        "daytime": 0,
+        "nighttime": 0
+      },
+      "introduction": "",
+      "details": []
     },
     {
       "name": "Iskarek",
@@ -124,9 +247,20 @@
       "tradeCodes": ["Ba"],
       "gasGiants": ["placeholder"],
       "bases": [],
-      "description": "",
       "alert": "",
-      "moons": []
+      "moons": [],
+      "berthing": 0,
+      "weeklyTraffic": 0,
+      "diameter": 0,
+      "gravity": 0,
+      "orbitalPeriod": "",
+      "distanceFromStarAU": 0,
+      "temperatures": {
+        "daytime": 0,
+        "nighttime": 0
+      },
+      "introduction": "",
+      "details": []
     },
     {
       "name": "Tartarus",
@@ -164,7 +298,11 @@
         "<h3>Technology and Infrastructure</h3><p>Operating at <strong>Tech Level 8</strong>, Tartarus is capable of producing basic machinery, vehicles, and electronics but relies on off-world imports for anything advanced. The planet's <strong>Class C starport</strong> provides refueling and small craft repairs, but major overhauls require travel to better-equipped worlds. Infrastructure is functional but often outdated, with wealthier individuals and corporations maintaining the best technology.</p>",
 
         "<h3>Law and Order</h3><p>Tartarus' laws permit personal firearms but restricts heavier weaponry and military-grade equipment. However, enforcement is lax, and the real rule of law is dictated by corporate influence rather than any formalized legal code. Disputes are often settled through economic sabotage, blackmail, or quiet assassinations rather than open violence.</p>"
-      ]
+      ],
+      "berthing": 0,
+      "weeklyTraffic": 0,
+      "introduction": "",
+      "details": []
     },
     {
       "name": "Wellspring",
@@ -175,7 +313,20 @@
       "gasGiants": ["placeholder"],
       "bases": [],
       "description": "",
-      "alert": "Amber"
+      "alert": "Amber",
+      "moons": [],
+      "berthing": 0,
+      "weeklyTraffic": 0,
+      "diameter": 0,
+      "gravity": 0,
+      "orbitalPeriod": "",
+      "distanceFromStarAU": 0,
+      "temperatures": {
+        "daytime": 0,
+        "nighttime": 0
+      },
+      "introduction": "",
+      "details": []
     },
     {
       "name": "Ascendara",
@@ -187,7 +338,19 @@
       "bases": ["Army"],
       "description": "",
       "alert": "",
-      "moons": []
+      "moons": [],
+      "berthing": 0,
+      "weeklyTraffic": 0,
+      "diameter": 0,
+      "gravity": 0,
+      "orbitalPeriod": "",
+      "distanceFromStarAU": 0,
+      "temperatures": {
+        "daytime": 0,
+        "nighttime": 0
+      },
+      "introduction": "",
+      "details": []
     },
     {
       "name": "Darkynth",
@@ -199,7 +362,19 @@
       "bases": ["Scout"],
       "description": "",
       "alert": "",
-      "moons": []
+      "moons": [],
+      "berthing": 0,
+      "weeklyTraffic": 0,
+      "diameter": 0,
+      "gravity": 0,
+      "orbitalPeriod": "",
+      "distanceFromStarAU": 0,
+      "temperatures": {
+        "daytime": 0,
+        "nighttime": 0
+      },
+      "introduction": "",
+      "details": []
     },
     {
       "name": "Quindara",
@@ -211,7 +386,19 @@
       "bases": ["Pirate"],
       "description": "",
       "alert": "",
-      "moons": []
+      "moons": [],
+      "berthing": 0,
+      "weeklyTraffic": 0,
+      "diameter": 0,
+      "gravity": 0,
+      "orbitalPeriod": "",
+      "distanceFromStarAU": 0,
+      "temperatures": {
+        "daytime": 0,
+        "nighttime": 0
+      },
+      "introduction": "",
+      "details": []
     },
     {
       "name": "Crynthor Belt",
@@ -223,7 +410,19 @@
       "bases": ["Scout"],
       "description": "",
       "alert": "",
-      "moons": []
+      "moons": [],
+      "berthing": 0,
+      "weeklyTraffic": 0,
+      "diameter": 0,
+      "gravity": 0,
+      "orbitalPeriod": "",
+      "distanceFromStarAU": 0,
+      "temperatures": {
+        "daytime": 0,
+        "nighttime": 0
+      },
+      "introduction": "",
+      "details": []
     },
     {
       "name": "Savon",
@@ -235,7 +434,19 @@
       "bases": ["Scout"],
       "description": "",
       "alert": "",
-      "moons": []
+      "moons": [],
+      "berthing": 0,
+      "weeklyTraffic": 0,
+      "diameter": 0,
+      "gravity": 0,
+      "orbitalPeriod": "",
+      "distanceFromStarAU": 0,
+      "temperatures": {
+        "daytime": 0,
+        "nighttime": 0
+      },
+      "introduction": "",
+      "details": []
     },
     {
       "name": "Hera",
@@ -246,7 +457,20 @@
       "gasGiants": ["placeholder"],
       "bases": [],
       "description": "",
-      "alert": "Red"
+      "alert": "Red",
+      "moons": [],
+      "berthing": 0,
+      "weeklyTraffic": 0,
+      "diameter": 0,
+      "gravity": 0,
+      "orbitalPeriod": "",
+      "distanceFromStarAU": 0,
+      "temperatures": {
+        "daytime": 0,
+        "nighttime": 0
+      },
+      "introduction": "",
+      "details": []
     },
     {
       "name": "Sterith",
@@ -258,7 +482,19 @@
       "bases": ["Scout"],
       "description": "",
       "alert": "",
-      "moons": []
+      "moons": [],
+      "berthing": 0,
+      "weeklyTraffic": 0,
+      "diameter": 0,
+      "gravity": 0,
+      "orbitalPeriod": "",
+      "distanceFromStarAU": 0,
+      "temperatures": {
+        "daytime": 0,
+        "nighttime": 0
+      },
+      "introduction": "",
+      "details": []
     },
     {
       "name": "Vintros",
@@ -270,7 +506,19 @@
       "bases": ["Highport"],
       "description": "",
       "alert": "",
-      "moons": []
+      "moons": [],
+      "berthing": 0,
+      "weeklyTraffic": 0,
+      "diameter": 0,
+      "gravity": 0,
+      "orbitalPeriod": "",
+      "distanceFromStarAU": 0,
+      "temperatures": {
+        "daytime": 0,
+        "nighttime": 0
+      },
+      "introduction": "",
+      "details": []
     },
     {
       "name": "Xaris",
@@ -280,8 +528,20 @@
       "tradeCodes": ["Hi", "Ht", "In", "Wa"],
       "gasGiants": ["placeholder"],
       "bases": ["Highport", "Army", "Navy"],
-      "description": "",
-      "alert": "Amber"
+      "alert": "Amber",
+      "moons": [],
+      "berthing": 0,
+      "weeklyTraffic": 0,
+      "diameter": 0,
+      "gravity": 0,
+      "orbitalPeriod": "",
+      "distanceFromStarAU": 0,
+      "temperatures": {
+        "daytime": 0,
+        "nighttime": 0
+      },
+      "introduction": "",
+      "details": []
     },
     {
       "name": "Eryndor",
@@ -291,9 +551,20 @@
       "tradeCodes": ["Ag", "Ga", "Lt"],
       "gasGiants": ["placeholder"],
       "bases": [],
-      "description": "",
       "alert": "",
-      "moons": []
+      "moons": [],
+      "berthing": 0,
+      "weeklyTraffic": 0,
+      "diameter": 0,
+      "gravity": 0,
+      "orbitalPeriod": "",
+      "distanceFromStarAU": 0,
+      "temperatures": {
+        "daytime": 0,
+        "nighttime": 0
+      },
+      "introduction": "",
+      "details": []
     },
     {
       "name": "Korthalon",
@@ -303,8 +574,20 @@
       "tradeCodes": ["De", "Ht", "Lo", "Po", "Co"],
       "gasGiants": [],
       "bases": ["Highport", "Scout"],
-      "description": "",
-      "alert": "Amber"
+      "alert": "Amber",
+      "moons": [],
+      "berthing": 0,
+      "weeklyTraffic": 0,
+      "diameter": 0,
+      "gravity": 0,
+      "orbitalPeriod": "",
+      "distanceFromStarAU": 0,
+      "temperatures": {
+        "daytime": 0,
+        "nighttime": 0
+      },
+      "introduction": "",
+      "details": []
     },
     {
       "name": "Harconis",
@@ -314,9 +597,20 @@
       "tradeCodes": ["Ag", "Ni"],
       "gasGiants": ["placeholder"],
       "bases": ["Highport", "Navy", "Scout"],
-      "description": "",
       "alert": "",
-      "moons": []
+      "moons": [],
+      "berthing": 0,
+      "weeklyTraffic": 0,
+      "diameter": 0,
+      "gravity": 0,
+      "orbitalPeriod": "",
+      "distanceFromStarAU": 0,
+      "temperatures": {
+        "daytime": 0,
+        "nighttime": 0
+      },
+      "introduction": "",
+      "details": []
     },
     {
       "name": "Nimvaron",
@@ -326,9 +620,20 @@
       "tradeCodes": ["Na", "Ni", "Po"],
       "gasGiants": ["placeholder"],
       "bases": [],
-      "description": "",
       "alert": "",
-      "moons": []
+      "moons": [],
+      "berthing": 0,
+      "weeklyTraffic": 0,
+      "diameter": 0,
+      "gravity": 0,
+      "orbitalPeriod": "",
+      "distanceFromStarAU": 0,
+      "temperatures": {
+        "daytime": 0,
+        "nighttime": 0
+      },
+      "introduction": "",
+      "details": []
     },
     {
       "name": "Duskyre",
@@ -338,8 +643,20 @@
       "tradeCodes": ["Fl"],
       "gasGiants": ["placeholder"],
       "bases": ["Navy", "Scout"],
-      "description": "",
-      "alert": "Amber"
+      "alert": "Amber",
+      "moons": [],
+      "berthing": 0,
+      "weeklyTraffic": 0,
+      "diameter": 0,
+      "gravity": 0,
+      "orbitalPeriod": "",
+      "distanceFromStarAU": 0,
+      "temperatures": {
+        "daytime": 0,
+        "nighttime": 0
+      },
+      "introduction": "",
+      "details": []
     },
     {
       "name": "Galtran",
@@ -349,9 +666,20 @@
       "tradeCodes": ["Lt"],
       "gasGiants": ["placeholder"],
       "bases": [],
-      "description": "",
       "alert": "",
-      "moons": []
+      "moons": [],
+      "berthing": 0,
+      "weeklyTraffic": 0,
+      "diameter": 0,
+      "gravity": 0,
+      "orbitalPeriod": "",
+      "distanceFromStarAU": 0,
+      "temperatures": {
+        "daytime": 0,
+        "nighttime": 0
+      },
+      "introduction": "",
+      "details": []
     },
     {
       "name": "Stygara",
@@ -361,9 +689,20 @@
       "tradeCodes": ["Ni", "Po", "Co"],
       "gasGiants": ["placeholder"],
       "bases": ["Scout"],
-      "description": "",
       "alert": "",
-      "moons": []
+      "moons": [],
+      "berthing": 0,
+      "weeklyTraffic": 0,
+      "diameter": 0,
+      "gravity": 0,
+      "orbitalPeriod": "",
+      "distanceFromStarAU": 0,
+      "temperatures": {
+        "daytime": 0,
+        "nighttime": 0
+      },
+      "introduction": "",
+      "details": []
     }
   ]
 }
