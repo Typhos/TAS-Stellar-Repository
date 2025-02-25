@@ -124,16 +124,16 @@ export const HydrographicsData: Record<string, UWPHydrographics> = {
 
 export const PopulationData: Record<string, UWPPopulation> = {
   "0": { code: "0", populationRange: "None", description: "Uninhabited" },
-  "1": { code: "1", populationRange: "1-10", description: "Few inhabitants" },
-  "2": { code: "2", populationRange: "Dozens", description: "Small outpost or village" },
-  "3": { code: "3", populationRange: "Hundreds", description: "Small community" },
-  "4": { code: "4", populationRange: "Thousands", description: "Small town" },
-  "5": { code: "5", populationRange: "Tens of thousands", description: "Town or small city" },
-  "6": { code: "6", populationRange: "Hundreds of thousands", description: "City" },
-  "7": { code: "7", populationRange: "Millions", description: "Large city" },
-  "8": { code: "8", populationRange: "Tens of millions", description: "Metropolis" },
-  "9": { code: "9", populationRange: "Hundreds of millions", description: "Megalopolis" },
-  A: { code: "A", populationRange: "Billions", description: "Planet-wide population" },
+  "1": { code: "1", populationRange: "Few", description: "Few inhabitants" },
+  "2": { code: "2", populationRange: "Hundreds", description: "Small outpost or village" },
+  "3": { code: "3", populationRange: "Thousands", description: "Small community" },
+  "4": { code: "4", populationRange: "Tens of thousands", description: "Small town" },
+  "5": { code: "5", populationRange: "Hundreds of thousands", description: "Town or small city" },
+  "6": { code: "6", populationRange: "Millions", description: "City" },
+  "7": { code: "7", populationRange: "Tens of millions", description: "Large city" },
+  "8": { code: "8", populationRange: "Hundreds of millions", description: "Metropolis" },
+  "9": { code: "9", populationRange: "Billions", description: "Megalopolis" },
+  A: { code: "A", populationRange: "Tens of billions", description: "Planet-wide population" },
 };
 
 export const GovernmentData: Record<string, UWPGovernment> = {
