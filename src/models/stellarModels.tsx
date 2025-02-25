@@ -11,6 +11,8 @@ export interface Planet {
   moons: string[];
   rings: string[];
   bases: string[];
+  population?: number;
+  government?: string;
   diameter: number;
   gravity: number;
   temperatures: {

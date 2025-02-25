@@ -15,6 +15,7 @@ import React, { useEffect, useState } from "react";
 import DOMPurify from "dompurify";
 import JumpTimeTable from "../../components/JumpTimeTable/JumpTimeTable";
 import { compileSectorData } from "../../data/dataLoader";
+import { formatPopulation } from "../../utils/helpers";
 import { getStarportInfo } from "../../models/starportModel";
 import { useParams } from "react-router-dom";
 
@@ -125,7 +126,7 @@ const PlanetDetails: React.FC = () => {
           <li className="overview-grid__item">
             <h4 className="overview-grid__title">Size</h4>
             <p className="overview-grid__value">
-              {planet.diameter ? planet.diameter.toString()?.concat(" km") : SizeData[planet.uwp[1]]?.diameter} (
+              {planet.diameter ? planet.diameter?.toLocaleString().concat(" km") : SizeData[planet.uwp[1]]?.diameter} (
               {planet.gravity ? planet.gravity + " G" : SizeData[planet.uwp[1]]?.gravity})
             </p>
           </li>
@@ -142,11 +143,17 @@ const PlanetDetails: React.FC = () => {
           </li>
           <li className="overview-grid__item">
             <h4 className="overview-grid__title">Population</h4>
-            <p className="overview-grid__value">{PopulationData[planet.uwp[4]]?.populationRange || "Unknown"}</p>
+            <p className="overview-grid__value">
+              {planet.population
+                ? formatPopulation(planet.population)
+                : PopulationData[planet.uwp[4]]?.populationRange || "Unknown"}
+            </p>
           </li>
           <li className="overview-grid__item">
             <h4 className="overview-grid__title">Government</h4>
-            <p className="overview-grid__value">{GovernmentData[planet.uwp[5]]?.description || "Unknown"}</p>
+            <p className="overview-grid__value">
+              {planet.government ? planet.government : GovernmentData[planet.uwp[5]]?.description || "Unknown"}
+            </p>
           </li>
           <li className="overview-grid__item">
             <h4 className="overview-grid__title">Law Level</h4>

@@ -280,9 +280,10 @@
         "daytime": 28,
         "nighttime": 8
       },
-      "description": [
-        "<p><strong>Tartarus</strong> is a harsh, arid world known for its culture of deception, political intrigue, and economic struggle. A non-industrial and resource-poor planet, it survives through trade and careful manipulation of off-world interests. Its oligarchic government is composed of powerful trade consortiums that dominate both commerce and daily life.</p>",
-
+      "berthing": 0,
+      "weeklyTraffic": 0,
+      "introduction": "<p><strong>Tartarus</strong> is a harsh, arid world known for its culture of deception, political intrigue, and economic struggle. A non-industrial and resource-poor planet, it survives through trade and careful manipulation of off-world interests. Its oligarchic government is composed of powerful trade consortiums that dominate both commerce and daily life.</p>",
+      "details": [
         "<h3>Geography and Climate</h3><p>Tartarus is a small planet with a gravity of 0.36g, making movement easier but requiring adjustments for long-term habitation. Its thin atmosphere is breathable but sparse, creating dry, arid conditions. With only 21% surface water, most of the planet consists of rocky badlands, eroded mesas, and sprawling desert plains. The climate varies sharply between day and night, with temperatures ranging from 28°C during the day to 8°C at night. Dust storms are frequent, particularly in the highland regions.</p>",
 
         "<h3>History</h3><p>The early settlers of Tartarus were drawn by promises of untapped resources, but the planet's poor economic viability led to the collapse of its initial colonization efforts. What remained were tight-knit trade guilds and corporate factions that evolved into an oligarchic power structure. Over time, manipulation and deception became an ingrained part of Tartarusian culture, ensuring that only the most cunning could thrive in its unforgiving environment.</p>",
@@ -298,11 +299,7 @@
         "<h3>Technology and Infrastructure</h3><p>Operating at <strong>Tech Level 8</strong>, Tartarus is capable of producing basic machinery, vehicles, and electronics but relies on off-world imports for anything advanced. The planet's <strong>Class C starport</strong> provides refueling and small craft repairs, but major overhauls require travel to better-equipped worlds. Infrastructure is functional but often outdated, with wealthier individuals and corporations maintaining the best technology.</p>",
 
         "<h3>Law and Order</h3><p>Tartarus' laws permit personal firearms but restricts heavier weaponry and military-grade equipment. However, enforcement is lax, and the real rule of law is dictated by corporate influence rather than any formalized legal code. Disputes are often settled through economic sabotage, blackmail, or quiet assassinations rather than open violence.</p>"
-      ],
-      "berthing": 0,
-      "weeklyTraffic": 0,
-      "introduction": "",
-      "details": []
+      ]
     },
     {
       "name": "Wellspring",
@@ -530,6 +527,7 @@
       "bases": ["Highport", "Army", "Navy"],
       "alert": "Amber",
       "moons": [],
+      "population": 325920000,
       "berthing": 0,
       "weeklyTraffic": 0,
       "diameter": 0,

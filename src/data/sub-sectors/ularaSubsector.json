@@ -357,6 +357,7 @@
       "berthing": 1500,
       "alert": "",
       "moons": [],
+      "population": 25560000000,
       "diameter": 14717,
       "orbitalPeriod": "577D 10H",
       "distanceFromStarAU": 1.42,
@@ -364,7 +365,7 @@
         "daytime": 23,
         "nighttime": 9
       },
-      "introduction": "<p><strong>Nokara</strong>, also known as <strong>'Ulara Prime'</strong>, is a world where towering arcologies, sprawling agricultural complexes, and inland seas coexist under the watchful eye of an <strong>immense civil bureaucracy</strong>. With a population in the billions, Nokara thrives not through military might but as the economic, diplomatic, and administrative heart of the region. Its society prizes <strong>academic excellence, civic duty, and bureaucratic mastery</strong>, with power concentrated in the hands of lifelong administrators and policy architects. Technological integration is seamless, from AI-managed infrastructures to commonplace cybernetic enhancements, reflecting both convenience and status.</p><p>Beneath its structured surface, Nokara's perfection frays at the edges. <strong>Legal rigidity, state surveillance, and social stratification</strong> create cracks where corporate syndicates and underground movements flourish. Yet, for many, Nokara isn't an oppressive state—it's a world of <strong>opportunity, stability, and efficiency</strong>, where success is earned through intellect and ambition. Whether viewed as a utopia of order or a labyrinth of control, Nokara remains an unavoidable force in the political and economic currents of the sector.</p>",
+      "introduction": "<p><strong>Nokara</strong>, also known as <strong>'Ulara Prime'</strong>, is a world of <strong>25 billion</strong> people where towering arcologies, sprawling agricultural complexes, and inland seas coexist under the watchful eye of an <strong>immense civil bureaucracy</strong>. With a population in the billions, Nokara thrives not through military might but as the economic, diplomatic, and administrative heart of the region. Its society prizes <strong>academic excellence, civic duty, and bureaucratic mastery</strong>, with power concentrated in the hands of lifelong administrators and policy architects. Technological integration is seamless, from AI-managed infrastructures to commonplace cybernetic enhancements, reflecting both convenience and status.</p><p>Beneath its structured surface, Nokara's perfection frays at the edges. <strong>Legal rigidity, state surveillance, and social stratification</strong> create cracks where corporate syndicates and underground movements flourish. Yet, for many, Nokara isn't an oppressive state—it's a world of <strong>opportunity, stability, and efficiency</strong>, where success is earned through intellect and ambition. Whether viewed as a utopia of order or a labyrinth of control, Nokara remains an unavoidable force in the political and economic currents of the sector.</p>",
 
       "details": [
         "<h2>Astrography and Planetology</h2><p>Nokara orbits its star at a distance of 1.42 AU, with an orbital period of 577 days and 10 hours. The planet has a diameter of 14,717 km, slightly larger than Earth, with gravity at 1.25G. Its dense, tainted atmosphere requires the use of <strong>light respirators</strong> for prolonged outdoor exposure, particularly for off-worlders. Although Nokara lacks significant natural satellites, its orbit is crowded with <strong>orbital stations, trade hubs, and military platforms</strong> supporting its immense population and interstellar commerce.</p><p>The planet's surface is a patchwork of <strong>sprawling arcologies</strong>, industrial complexes, and vast inland seas. With roughly 50% water coverage, Nokara is dominated by <strong>floating cities, artificial islands, and hydroponic farms</strong>. Instead of vast oceans, extensive river networks and salt flats shape its geography, while <strong>massive environmental control systems</strong> regulate urban climates within enclosed megastructures.</p>",
@@ -430,24 +431,44 @@
       "name": "Trisvaal",
       "col": 3,
       "row": 6,
-      "uwp": "X332316-5",
+      "uwp": "X332336-5",
       "tradeCodes": ["Lo", "Po", "Lt"],
-      "gasGiants": ["placeholder"],
+      "gasGiants": ["Khuman (GMA)"],
       "bases": [],
       "alert": "",
       "moons": [],
       "berthing": 0,
+      "population": 470,
       "weeklyTraffic": 0,
-      "diameter": 0,
-      "gravity": 0,
-      "orbitalPeriod": "",
-      "distanceFromStarAU": 0,
+      "government": "Self-Perpetuating Theocratic Oligarchy",
+      "diameter": 4378,
+      "gravity": 0.35,
+      "orbitalPeriod": "594D 19H",
+      "distanceFromStarAU": 0.91,
       "temperatures": {
-        "daytime": 0,
-        "nighttime": 0
+        "daytime": 68,
+        "nighttime": -10
       },
-      "introduction": "",
-      "details": []
+      "introduction": "<p><strong>Trisvaal</strong> is the remnant of a failed exodus, the descendants of a lost generation ship that strayed from its intended destination and instead arrived here. According to the faith of its people, their ancestors were bound for a world they call <strong>Shambala</strong>, a paradise planet where they were meant to begin anew. Instead, they found themselves stranded above a barren, airless world. Over centuries, their technology regressed, and their once-great vessel was slowly dismantled, its components used to construct surface settlements.</p><p>Now numbering only <strong>470</strong>, the people of Trisvaal live under a self-perpetuating <strong>theocratic oligarchy</strong> led by the <strong>Waykeepers</strong>. Life is governed by the belief that they must remain steadfast until the path to Shambala is revealed once more. Though their technology has declined to an <strong>Industrial Age (TL5) level</strong>, the ruined hulk of their ancestral vessel still drifts in orbit—a silent monument to the past and a potential source of forgotten knowledge.</p>",
+      "details": [
+        "<h2>Astrography and Planetology</h2><p>Trisvaal orbits at <strong>0.91 AU</strong> from its star, with an orbital period of <strong>594 days</strong>. The planet has a diameter of <strong>4,378 km</strong> and a surface gravity of <strong>0.35 G</strong>. With a <strong>very thin atmosphere</strong>, prolonged exposure outside requires respirators and protective clothing. Water is harvested from <strong>subterranean ice deposits</strong> and stored in underground cisterns.</p><p>The original colony was never meant to settle here. Instead, the people of Trisvaal are the descendants of the <strong>Exodus</strong>, a massive generation ship that suffered navigational failure and ended up in orbit around this inhospitable world. While much of the ship was cannibalized for resources, a large section remains in orbit, gradually decaying due to centuries of exposure to space debris.</p>",
+
+        "<h2>Society and Culture</h2><p>Trisvaal’s society is centered around the belief in the <strong>Ancient Journey</strong>, an unfinished exodus to a paradise world called <strong>Shambala</strong>. Their ancestors, who once traveled the stars, were forced to make do with Trisvaal when the ship's systems failed. To this day, their faith teaches that they must remain vigilant until the means to resume their journey is revealed.</p><p>The settlement is divided into <strong>castes</strong>, with the ruling <strong>Waykeepers</strong> acting as both priests and administrators. Below them, the <strong>Stewards</strong> manage agriculture and industry, while the <strong>Fellows</strong> handle daily labor and maintenance. Every aspect of life is seen as a continuation of their ancestors’ voyage—working the land is akin to keeping the ship operational, and spiritual devotion is the means by which they will someday find their way to Shambala.</p>",
+
+        "<h2>Government</h2><p>Trisvaal is ruled by a <strong>self-perpetuating theocracy</strong>, where authority is passed among the <strong>Waykeepers</strong>, a select group who trace their lineage back to the original ship’s command staff. This leadership interprets the will of their ancestors, governing with the belief that they are guiding their people toward the eventual revelation of the true path.</p>",
+
+        "<h3>Imperial Relations</h3><p>Trisvaal exists on the margins of the Imperium, officially recorded but otherwise ignored due to its lack of economic or military significance. No Imperial authorities are stationed here, and no starport exists. Without external trade, the world remains entirely self-sufficient, its people largely unaware of greater galactic politics.</p>",
+
+        "<h2>Law and Order</h2><p>While Trisvaal has no formal laws against weapons, the concept of armed conflict is considered <strong>antithetical</strong> to their beliefs. Their ancestors relied on wisdom, discipline, and patience to endure their long voyage, and the people of Trisvaal continue to value these virtues. As such, weapons are simply <strong>not part of their culture</strong>, and the idea of external threats is almost inconceivable.</p><p>Social order is maintained by the <strong>Sentinels</strong>, a group of enforcers who ensure adherence to religious and civic law. The small population makes formal policing unnecessary—deviations from expected behavior are noticed immediately.</p>",
+
+        "<h2>Economy</h2><p>Trisvaal operates under a <strong>communal economy</strong>, with resources distributed according to religious doctrine. Agriculture is based on <strong>hydroponic farming</strong>, supplemented by hunting and foraging in the caves that house subterranean ice deposits. Basic tools and equipment are produced locally, with no formal currency in use.</p>",
+
+        "<h2>Technology</h2><p>Originally capable of interstellar travel, the people of Trisvaal have regressed to <strong>Tech Level 5</strong> due to the slow degradation of knowledge and infrastructure. Industrial-age technology supports their survival, with water purification, mechanical farming, and basic metallurgy forming the foundation of their society.</p><p>The remains of the <strong>Exodus</strong>, their original generation ship, still drift in orbit. The vessel has suffered centuries of decay, with portions breaking away due to impacts and radiation exposure. Despite this, some systems may still be intact, making it a potential site for recovering lost knowledge.</p>",
+
+        "<h2>Religion</h2><p>The belief in <strong>Shambala</strong> is central to life on Trisvaal. The Waykeepers teach that their ancestors were destined for a paradise world but were stranded due to an unknown failure. Some factions within the faith believe that their trials on Trisvaal are a test, while others hold that they must one day repair the ship and complete their journey.</p><p>Religious ceremonies include <strong>symbolic navigation exercises</strong>, <strong>retellings of the Exodus’ final transmissions</strong>, and the maintenance of <strong>ancestral star charts</strong>, which are regarded as sacred artifacts.</p>",
+
+        "<h2>Notable Figures</h2><p><strong>High Waykeeper Jothan Hale:</strong> The highest-ranking spiritual and administrative leader, responsible for guiding the settlement.</p><p><strong>Waykeeper Veris Lhan:</strong> The chief historian, tasked with preserving oral records and maintaining what little remains of their original technological knowledge.</p><p><strong>Sentinel-Captain Oryn Vas:</strong> The head of security, responsible for maintaining social order in accordance with religious law.</p><p><strong>The Exodus:</strong> Though not a person, the ruined hulk of the original generation ship remains in orbit. It is unknown how much of its technology remains intact, but it represents both the past and the potential future of Trisvaal.</p>"
+      ]
     },
     {
       "name": "Veydran",
@@ -596,6 +617,7 @@
       "berthing": 1500,
       "alert": "",
       "moons": ["Laguda (2950 km)"],
+      "population": 610,
       "diameter": 5933,
       "orbitalPeriod": "541D 7H",
       "distanceFromStarAU": 1.36,
@@ -725,6 +747,7 @@
       "details": [],
       "alert": "",
       "moons": [],
+      "population": 81400,
       "berthing": 0,
       "weeklyTraffic": 0,
       "diameter": 0,
